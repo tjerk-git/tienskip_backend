@@ -12,6 +12,10 @@ class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
 
+    public function canAccessPanel(\Filament\Panel $panel): bool
+    {
+        return true;
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -46,8 +50,5 @@ class User extends Authenticatable implements FilamentUser
         ];
     }
 
-    public function canAccessFilament(): bool
-    {
-        return str_ends_with($this->email, '@icloud.com') && $this->hasVerifiedEmail();
-    }
+
 }
