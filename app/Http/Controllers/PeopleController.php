@@ -10,7 +10,12 @@ class PeopleController extends Controller
     public function index()
     {
         $people = Person::all();
-        return response()->json($people);
+        $peopleWithAvatar = $people->map(function ($person) {
+            $person->avatar = asset('storage/' . $person->avatar);
+            return $person;
+        });
+
+        return response()->json($peopleWithAvatar);
     }
 
 }
