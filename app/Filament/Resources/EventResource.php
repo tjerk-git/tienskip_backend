@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PersonResource\Pages;
-use App\Filament\Resources\PersonResource\RelationManagers;
-use App\Models\Person;
+use App\Filament\Resources\EventResource\Pages;
+use App\Filament\Resources\EventResource\RelationManagers;
+use App\Models\Event;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,42 +12,35 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Filters\Filter;
 
-
-
-class PersonResource extends Resource
+class EventResource extends Resource
 {
-    protected static ?string $model = Person::class;
+    protected static ?string $model = Event::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->label('Naam')
+                    ->label('Titel')
                     ->required(),
-                Forms\Components\TextInput::make('email')
-                    ->label('Email')
-                    ->email()
-                    ->nullable(),
+                Forms\Components\TextInput::make('address')
+                    ->label('Locatie')
+                    ->required(),
+                Forms\Components\TextInput::make('province')
+                    ->label('Provincie')
+                    ->required(),
                 Forms\Components\Textarea::make('description')
                     ->label('Omschrijving')
                     ->nullable(),
-                Forms\Components\Textarea::make('fact')
-                    ->label('Feitje')
+                Forms\Components\DateTimePicker::make('start_date')
+                    ->label("Start tijd en datum")
                     ->nullable(),
-                Forms\Components\TextInput::make('member_since')
-                    ->label('Lid sinds')
-                    ->nullable(),
-                Forms\Components\FileUpload::make('avatar')
-                    ->label('Avatar')
-                    ->avatar()
-                    ->imagePreviewHeight('150px')
+                Forms\Components\DateTimePicker::make('end_date')
+                    ->label("Einddatum en tijd")
                     ->nullable(),
             ]);
     }
@@ -59,16 +52,20 @@ class PersonResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->label('Naam'),
-                Tables\Columns\TextColumn::make('email')
+                Tables\Columns\TextColumn::make('province')
                     ->searchable()
-                    ->label('Email'),
-                Tables\Columns\TextColumn::make('member_since')
+                    ->label('Provence'),
+                Tables\Columns\TextColumn::make('start_date')
                     ->searchable()
-                    ->label('Lid sinds'),
-
+                    ->label('Datum start'),
+                Tables\Columns\TextColumn::make('end_date')
+                    ->searchable()
+                    ->label('Datum eind'),
             ])
             ->filters([
-
+                Filter::make('Aankomende')
+                    ->label('Aankomende')
+                    ->query(fn(Builder $query): Builder => $query->whereDate('start_date', '>', now()))
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -90,9 +87,9 @@ class PersonResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPeople::route('/'),
-            'create' => Pages\CreatePerson::route('/create'),
-            'edit' => Pages\EditPerson::route('/{record}/edit'),
+            'index' => Pages\ListEvents::route('/'),
+            'create' => Pages\CreateEvent::route('/create'),
+            'edit' => Pages\EditEvent::route('/{record}/edit'),
         ];
     }
 }
