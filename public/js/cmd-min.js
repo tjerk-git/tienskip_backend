@@ -1,7 +1,9 @@
 var $ = jQuery.noConflict();
 $(document).ready(function (e) {
-    SiteManager.init();
-
+    // only init when $(".cmd-people-container") is found on the page
+    if ($(".cmd-people-container").length > 0) {
+        SiteManager.init();
+    }
 });
 
 // wait 3 seconds and then click the button
@@ -64,6 +66,7 @@ var SiteManager = {
         myPeopleData: [],
         bNewButtonActive: !1,
         init: function () {
+
             $.getJSON(API_URL, this.onPeopleDataLoaded.bind(this)),
                 SiteManager.mob ? $(".cmd-people-container").on("touchend", this.onMousedUp.bind(this)) : $(".cmd-people-container").on("mouseup", this.onMousedUp.bind(this));
         },

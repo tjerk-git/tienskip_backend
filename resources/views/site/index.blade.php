@@ -28,30 +28,12 @@
         <div class="events">
           <div class="red_border"></div>
           <swiper-container class="mySwiper" slides-per-view="5" space-between="45" grab-cursor="true" free-mode="true" autoplay="true">
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
+            @foreach($events as $event)
+              <swiper-slide>
+                <time>{{ $event->start_date->format('j F') }}</time>
+                <h3>{{ $event->province }}</h3>
+              </swiper-slide>
+            @endforeach
           </swiper-container>
 
         </div>

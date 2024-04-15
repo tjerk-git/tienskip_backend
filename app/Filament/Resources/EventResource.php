@@ -30,8 +30,22 @@ class EventResource extends Resource
                 Forms\Components\TextInput::make('address')
                     ->label('Locatie')
                     ->required(),
-                Forms\Components\TextInput::make('province')
+                Forms\Components\Select::make('province')
                     ->label('Provincie')
+                    ->options([
+                        'Drenthe' => 'Drenthe',
+                        'Flevoland' => 'Flevoland',
+                        'Friesland' => 'Friesland',
+                        'Gelderland' => 'Gelderland',
+                        'Groningen' => 'Groningen',
+                        'Limburg' => 'Limburg',
+                        'Noord-Brabant' => 'Noord-Brabant',
+                        'Noord-Holland' => 'Noord-Holland',
+                        'Overijssel' => 'Overijssel',
+                        'Utrecht' => 'Utrecht',
+                        'Zeeland' => 'Zeeland',
+                        'Zuid-Holland' => 'Zuid-Holland',
+                    ])
                     ->required(),
                 Forms\Components\Textarea::make('description')
                     ->label('Omschrijving')
@@ -54,7 +68,7 @@ class EventResource extends Resource
                     ->label('Naam'),
                 Tables\Columns\TextColumn::make('province')
                     ->searchable()
-                    ->label('Provence'),
+                    ->label('Province'),
                 Tables\Columns\TextColumn::make('start_date')
                     ->searchable()
                     ->label('Datum start'),
