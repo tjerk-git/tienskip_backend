@@ -29,7 +29,7 @@ class EventController extends Controller
 
       $html = "<div class='map_province'><h1 class='red_box align_center'>" . ucfirst($province) . "</h1>";
       foreach ($events as $event) {
-        $html .= "<div class='mini_event first'><div class='mini_event_container'><div class='mini_event_title'>" . date('d F', strtotime($event->start_date)) . "</div><div class='mini_event_location'>$event->address</div></div></div>";
+        $html .= "<div class='mini_event first'><div class='mini_event_container'><div class='mini_event_title'>" . $event->start_date->isoFormat('D, MMMM') . "</div><div class='mini_event_location'>$event->address</div></div></div>";
       }
       $html .= "</div>";
 

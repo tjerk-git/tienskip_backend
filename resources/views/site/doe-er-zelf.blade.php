@@ -22,7 +22,7 @@
               </h2>
             </div>
             <p class="normal_body">
-              
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, impedit doloremque harum repudiandae ipsa aut beatae fuga aliquid consequatur exercitationem sit consectetur totam ullam fugiat perspiciatis, alias tenetur blanditiis cupiditate.
             </p>
 
             <a href="#" class="button blue">Help zelf ook mee</a>

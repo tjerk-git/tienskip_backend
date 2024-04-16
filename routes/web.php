@@ -8,8 +8,11 @@ use App\Models\Event;
 
 Route::get('/', function () {
   $events = Event::all();
-  return view('site.index', ['events' => $events]);
-  //return view('site.index');
+
+  // get event that hasn't happened yet
+  $nextEvent = Event::where('start_date', '>', date('Y-m-d H:i:s'))->orderBy('start_date', 'asc')->first();
+
+  return view('site.index', ['events' => $events, 'nextEvent' => $nextEvent]);
 });
 
 Route::get('/over-tienskip', function () {
@@ -25,7 +28,8 @@ Route::get('/doe-er-zelf-wat-aan', function () {
 });
 
 Route::get('/evenementen', function () {
-  return view('site.evenementen');
+  $events = Event::all();
+  return view('site.evenementen', ['events' => $events]);
 });
 
 Route::group(['prefix' => 'api'], function () {

@@ -26,37 +26,7 @@
           <h1>Geplande evenementen:</h1>
         </div>
 
-        <div class="events">
-          <div class="red_border"></div>
-          <swiper-container class="mySwiper" slides-per-view="5" space-between="45" grab-cursor="true"
-            free-mode="true">
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-            <swiper-slide>
-              <time>21 maart 2024</time>
-              <h3>Groningen</h3>
-            </swiper-slide>
-          </swiper-container>
-
-        </div>
+        <x-event_slider :events=$events></x-event_slider>
 
         <div class="impression_container">
           <div class="tienskip_dag_container">

@@ -11,8 +11,13 @@
           <div class="text-bg bg-purple upper-text">
             Volgende event
           </div>
-          <div class="text-bg bg-red right-text">
-            15 maart
+            <div class="text-bg bg-red right-text">
+            @if ($nextEvent)
+              {{ $nextEvent->start_date->isoFormat('D MMMM') }}
+            @else
+              coming soon
+            @endif
+            </div>
           </div>
         </div>
         <video class="video radius-1" autoplay muted loop>
@@ -25,18 +30,7 @@
           <h1>Geplande evenementen:</h1>
         </div>
 
-        <div class="events">
-          <div class="red_border"></div>
-          <swiper-container class="mySwiper" slides-per-view="5" space-between="45" grab-cursor="true" free-mode="true" autoplay="true">
-            @foreach($events as $event)
-              <swiper-slide>
-                <time>{{ $event->start_date->format('j F') }}</time>
-                <h3>{{ $event->province }}</h3>
-              </swiper-slide>
-            @endforeach
-          </swiper-container>
-
-        </div>
+        <x-event_slider :events=$events></x-event_slider>
 
         <div class="impression_container">
           <div class="tienskip_dag_container">
