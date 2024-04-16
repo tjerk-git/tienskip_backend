@@ -1,4 +1,7 @@
 <x-layout>
+  <x-slot name="title">
+    Over Tienskip
+  </x-slot>
 <div class="blue-backdrop"></div>
 
 <main>

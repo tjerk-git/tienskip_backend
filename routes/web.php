@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PeopleController;
 use App\Http\Controllers\EventController;
@@ -22,6 +23,9 @@ Route::get('/over-tienskip', function () {
 Route::get('/contact', function () {
   return view('site.contact');
 });
+
+// post to contact 
+Route::post('/contact', [SiteController::class, 'store']);
 
 Route::get('/doe-er-zelf-wat-aan', function () {
   return view('site.doe-er-zelf');

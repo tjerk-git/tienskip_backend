@@ -1,5 +1,8 @@
 
 <x-layout>
+    <x-slot name="title">
+    Doe er zelf wat aan
+  </x-slot>
 <div class="red-backdrop"></div>
     <main>
       <section class="doe-er-zelf-container radius-1">
