@@ -16,9 +16,7 @@
             Evenementen
           </div>
         </div>
-        <video class="video radius-1" autoplay muted loop>
-          <source src="/images/video/tskipper.mp4" type="video/mp4">
-        </video>
+        <x-video></x-video>
       </section>
 
       <section class="planned__events">
