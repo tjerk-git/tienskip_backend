@@ -8,14 +8,21 @@
     <main>
       <section class="video__container">
         <div class="float-video-container">
-          <div class="text-bg bg-purple upper-text">
-            Volgende event
+          <div class="text-bg bg-red next_event">
+            Volgende evenement:
           </div>
-            <div class="text-bg bg-red right-text">
-            @if ($nextEvent)
+          <div class="text-bg bg-purple upper-text">
+           @if ($nextEvent)
               {{ $nextEvent->start_date->isoFormat('D MMMM') }}
             @else
               coming soon
+            @endif
+          </div>
+            <div class="text-bg bg-blue right-text">
+            @if ($nextEvent)
+              {{ $nextEvent->province }}
+            @else
+              -
             @endif
             </div>
           </div>
