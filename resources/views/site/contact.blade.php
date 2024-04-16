@@ -5,7 +5,7 @@
 
 <div class="purple-backdrop"></div>
     <main>
-      <section class="hero_image_container">
+      <section class="hero_image_container radius-1">
         <div class="red_special_box">
           <a href="https://www.google.com/maps/search/?api=1&query=Snekertrekweg%201" target="_blank">
             Snekertrekweg 1
@@ -25,7 +25,7 @@
           <div class="side_red_special_box">06 22 05 26 60</div>
           <div class="side_blue_special_box"><a href="mailto:info@tienskip.nl">info@tienskip.nl</a></div>
         </div>
-        <img src="/images/7.webp" alt="Contact" class="radius-1">
+        
       </section>
 
       <section class="contact">

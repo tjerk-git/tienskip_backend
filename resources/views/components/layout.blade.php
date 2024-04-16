@@ -15,6 +15,17 @@
          <header>
       <div class="header__container">
 
+      <div class="mobile_menu">
+         
+        <nav>
+          <ul>
+            <li><a href="/over-tienskip">Over Tienskip</a></li>
+            <li><a href="/evenementen">Evenementen</a></li>
+            <li><a href="/doe-er-zelf-wat-aan">Doe er zelf wat aan</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
         <div class="menu__container">
           <nav class="nav__left">
             <ul>
@@ -35,6 +46,8 @@
           </nav>
         </div>
       </div>
+
+
     </header>
         {{ $slot }}
 
