@@ -1235,6 +1235,12 @@ footer {
   font-size: 2rem;
 }
 
+.filter_options {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
 @media (orientation: portrait) and (max-width: 640px) {
   .cmd-person {
     width: 16vw;

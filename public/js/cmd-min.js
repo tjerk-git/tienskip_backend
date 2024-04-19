@@ -11,7 +11,7 @@ setTimeout(function () {
     $(".js-drop-docent").click();
 }, 3000);
 
-const API_URL = "http://localhost:8000/api/people";
+const API_URL = "/api/people";
 //const LOCAL_API_URL = "/dist/people.json";
 
 var SiteManager = {
@@ -46,14 +46,6 @@ var SiteManager = {
             (e[t] = e[n]), (e[n] = i);
         }
     },
-    filterArray: function (e) {
-        // remove all elements that don't contain where the property member_since is greater than 2015
-        var filtered = e.filter(function (el) {
-            return el.member_year > 2020;
-        });
-
-        return filtered;
-    },
     onUpdateStage: function () {
         PeopleManager.onUpdateStage(), PhysicsManager.onUpdateStage(), window.requestAnimationFrame(this.onUpdateStage.bind(this));
     },
@@ -69,6 +61,8 @@ var SiteManager = {
 
             $.getJSON(API_URL, this.onPeopleDataLoaded.bind(this)),
                 SiteManager.mob ? $(".cmd-people-container").on("touchend", this.onMousedUp.bind(this)) : $(".cmd-people-container").on("mouseup", this.onMousedUp.bind(this));
+
+            $('.filterOption').on('change', this.onFilterBoiClicked.bind(this));
         },
         activateNewButton: function () {
             this.bNewButtonActive || (this.myNewPersonBtn.on("click", this.onNewClicked.bind(this)), this.myNewPersonBtn.fadeIn(), (this.bNewButtonActive = !0));
@@ -76,21 +70,67 @@ var SiteManager = {
         deActivateNewButton: function () {
             this.bNewButtonActive && (this.myNewPersonBtn.off("click"), this.myNewPersonBtn.fadeOut(), (this.bNewButtonActive = !1));
         },
-        onPeopleDataLoaded: function (e) {
+        onFilterBoiClicked: function (e) {
 
-            console.log(e);
+            // get selected value
+            const filterValue = e.target.value;
+
+            // get id of selected value
+            const filterId = e.target.id;
+
+            // console.log('filterId', filterId);
+            // console.log('filterValue', filterValue);
+
+            this.onNewClicked(filterId, filterValue);
+        },
+        onPeopleDataLoaded: function (e) {
 
             this.activateNewButton(), (this.myPeopleData = e), SiteManager.shuffleArray(this.myPeopleData);
             this.nCurrentPersonID = 0;
 
 
         },
-        onNewClicked: function () {
+        onNewClicked: function (filterId, filterValue) {
             //this.addPerson();
             this.nCurrentPersonID = 0;
-            for (var i = 0; i < this.myPeopleData.length; i++) {
+
+            //console.log('filter clicked');
+            this.clearAllPeople();
+
+            let toDisplayPeople = this.myPeopleData;
+
+            switch (filterId) {
+                case 'member_since':
+                    toDisplayPeople = toDisplayPeople.filter(function (el) {
+                        return el.member_since == filterValue;
+                    });
+                    break;
+                case 'member_fact':
+                    toDisplayPeople = toDisplayPeople.filter(function (el) {
+                        return el.fact == filterValue;
+                    });
+                    break;
+                case 'member_role':
+                    toDisplayPeople = toDisplayPeople.filter(function (el) {
+                        return el.description == filterValue;
+                    });
+                    break;
+                case '#':
+                    toDisplayPeople = this.myPeopleData;
+                    break;
+                // Add more cases for other filters if needed
+                default:
+                    //toDisplayPeople = this.myPeopleData;
+                    break;
+            }
+
+            console.log(toDisplayPeople);
+
+
+            for (var i = 0; i < toDisplayPeople.length; i++) {
                 this.addPerson();
             }
+
         },
         addPerson: function () {
             var e = "circle";

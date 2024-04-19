@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PeopleController;
 use App\Http\Controllers\EventController;
 use App\Models\Event;
+use App\Models\Person;
 
 
 Route::get('/', function () {
@@ -17,7 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/over-tienskip', function () {
-  return view('site.over');
+  $people = Person::all();
+
+  return view('site.over', ['people' => $people]);
 });
 
 Route::get('/contact', function () {

@@ -78,7 +78,31 @@
 <section class="ballenbak">
   <h2><span class="red_box">Het team van Tienskip</span></h2>
 
+  <div class="filter_options">
+  
+    <select id="member_since" class="filterOption">
+      <option value=#" selected>Lid sinds</option>
+    @foreach ($people as $person)
+      <option value="{{ $person['member_since'] }}">{{ $person['member_since'] }}</option>
+    @endforeach
+    </select>
 
+ 
+    <select id="member_fact" class="filterOption">
+      <option value="#" selected>Staat bekend om</option>
+    @foreach ($people as $person)
+      <option value="{{ $person['fact'] }}">{{ $person['fact'] }}</option>
+    @endforeach
+    </select>
+
+ 
+    <select id="member_role" class="filterOption">
+    <option value="#" selected>Rol binnen het team</option>
+    @foreach ($people as $person)
+      <option value="{{ $person['description'] }}">{{ $person['description'] }}</option>
+    @endforeach
+    </select>
+  </div>
   <div class="cmd-info-panel">
     <div class="cmd-info-panel__text">
       <div class="cmd-info-panel__text-info js-teacher-year"></div>
