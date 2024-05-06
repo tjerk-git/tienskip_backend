@@ -4,6 +4,7 @@ $(document).ready(function (e) {
     if ($(".cmd-people-container").length > 0) {
         SiteManager.init();
     }
+
 });
 
 // wait 3 seconds and then click the button
@@ -124,7 +125,7 @@ var SiteManager = {
                     break;
             }
 
-            console.log(toDisplayPeople);
+            // console.log(toDisplayPeople);
 
 
             for (var i = 0; i < toDisplayPeople.length; i++) {
@@ -165,6 +166,7 @@ var SiteManager = {
     },
 
 
+
     PhysicsManager = {
         FLOOR_HEIGHT: 1e3,
         WALL_WIDTH: 1e3,
@@ -178,6 +180,10 @@ var SiteManager = {
                 (this.world = this.engine.world),
                 (this.mouseConstraint = Matter.MouseConstraint.create(this.engine, { mouse: Matter.Mouse.create(document.querySelector(".cmd-people-container")) })),
                 Matter.Composite.add(this.world, this.mouseConstraint);
+
+            this.mouseConstraint.mouse.element.removeEventListener("mousewheel", this.mouseConstraint.mouse.mousewheel);
+            this.mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", this.mouseConstraint.mouse.mousewheel);
+
         },
         addPersonPhysicsObject: function (e) {
             var t,

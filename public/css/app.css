@@ -807,7 +807,7 @@ footer {
 
 .missie {
   width: 100vw;
-  height: 80vh;
+  height: 800px;
   background: url("/images/4.webp");
   background-size: cover;
   background-position: center;
@@ -1101,12 +1101,13 @@ footer {
 
 .ballenbak {
   position: relative;
-  height: calc(65vh + 15px);
+  height: 600px;
   width: 100vw;
   background: var(--abe);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: scroll;
 }
 
 .controls {
