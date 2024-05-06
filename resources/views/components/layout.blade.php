@@ -74,7 +74,7 @@
         <div>Bedrijfsplan</div>
       </div>
       <div class="address_container">
-        <div>0622052660</div>
+        <div>0582300669</div>
         <div>Jaarrekening</div>
       </div>
 
