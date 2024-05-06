@@ -33,7 +33,7 @@ var SiteManager = {
     handleStageResize: function () {
         console.log("handleStageResize"), (this.nScreenWidth = window.innerWidth), (this.nScreenHeight = window.innerHeight);
 
-        this.nScreenHeight = 622;
+        this.nScreenHeight = 600;
 
         var e = 0.01 * this.nScreenHeight,
             t = 0.01 * this.nScreenWidth;
