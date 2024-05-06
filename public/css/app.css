@@ -1101,7 +1101,7 @@ footer {
 
 .ballenbak {
   position: relative;
-  height: 60vh;
+  height: 65vh;
   width: 100vw;
   background: var(--abe);
   display: flex;
