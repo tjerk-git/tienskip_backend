@@ -53,12 +53,7 @@
 
       <sl-icon class="quote_icon upper_quote" name="quote"></sl-icon>
       <p>
-        Wij geloven dat democratie meer is dan alleen stemmen. Democratie
-        is een manier van leven
-        en een manier van samenleven. Democratie is een manier van denken
-        en een manier van doen.
-        Democratie is een manier
-        van zijn. Democratie is een manier van zijn.
+Volgens onze visie is democratie iets wat je niet uit de schoolboeken kan leren, maar in de praktijk moet ervaren. Ook is democratie  een groot goed, wat we veel te vaak te klein maken. Daarnaast volgen we naast ons motto “doe er zelf wat aan” ook het gedachtegoed: “Vertrouwen komt te voet en gaat te paard.” Daarom werken wij aan een zestal uitdagingen om onze missie, het behapbaar maken van democratie.
       </p>
       <sl-icon class="quote_icon lower_quote" name="quote"></sl-icon>
     </div>

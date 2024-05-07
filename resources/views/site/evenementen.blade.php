@@ -33,12 +33,7 @@
               </h2>
             </div>
             <p class="normal_body" data-type-speed="50">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti consectetur magnam,
-              dolores, id qui
-              dolorem aliquam exercitationem repudiandae magni possimus natus at quam maiores eligendi
-              repellat
-              recusandae
-              laborum? Iusto, officiis?
+ De Mienskip Dag, wat gaan we doen? De leerlingen komen binnen op een locatie die iets te maken heeft met de democratie of participatie. Hier krijgen zij hun eigen democratisch paspoort, een document dat zij vooraf hebben ingevuld om een probleem in hun eigen leefomgeving aan te kaarten. Dan worden ze op thema ingedeeld in groepen en begint de eerste brainstormfase: de probleemstelling. Als groep stellen zij een concreet probleem vast waaraan ze willen werken. Na een korte pauze begint de tweede fase: de oplossing. In deze fase werken ze aan een concrete oplossing die het probleem waar zij mee zitten kan oplossen. In de derde fase presenteren zij hun oplossing aan andere leerlingen, en alle aanwezige belangenorganisaties. Deze fase is verdeeld in twee delen: eerst bereiden ze in hun groep een pitch voor, en daarna pitchen ze dit aan de aanwezigen. 
             </p>
 
             <a href="#" class="button red">Help zelf ook mee</a>

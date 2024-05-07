@@ -53,9 +53,9 @@
 
          <footer class="blue">
 
-      <form class="signup_form">
+      <div class="signup_form">
         <a href="https://frl.us6.list-manage.com/subscribe?u=802ae56c2e7d4b7debdc2e63c&id=d391bccdb8" target="_blank" id="newsletter_submit">Abonneren nieuwsbrief</a>
-      </form>
+      </div>
 
       <div class="address_container">
         <div><a href="https://www.google.com/maps/search/?api=1&query=Snekertrekweg%201" target="_blank">Snekertrekweg 1</a></div>

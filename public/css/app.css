@@ -700,7 +700,6 @@ footer {
   width: 100%;
   background: var(--purple);
   color: white;
-  border: none;
   font-size: 2rem;
   padding: 4rem;
   text-transform: uppercase;
