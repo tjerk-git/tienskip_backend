@@ -675,7 +675,6 @@ footer {
 
 .signup_form {
   display: flex;
-  width: 80rem;
   position: absolute;
   top: -10%;
   height: 7rem;
@@ -697,18 +696,20 @@ footer {
   font-family: "aglet-slab", serif;
 }
 
-.signup_form button {
-  width: 50%;
+#newsletter_submit {
+  width: 100%;
   background: var(--purple);
   color: white;
   border: none;
   font-size: 2rem;
+  padding: 4rem;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-family: "aglet-slab", serif;
+  text-decoration: none;
 }
 
 .address_container {

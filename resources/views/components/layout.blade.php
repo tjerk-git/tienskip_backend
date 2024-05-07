@@ -54,8 +54,7 @@
          <footer class="blue">
 
       <form class="signup_form">
-        <input type="text" placeholder="EMAIL" required>
-        <button id="newsletter_submit">Abonneren nieuwsbrief</button>
+        <a href="https://frl.us6.list-manage.com/subscribe?u=802ae56c2e7d4b7debdc2e63c&id=d391bccdb8" target="_blank" id="newsletter_submit">Abonneren nieuwsbrief</a>
       </form>
 
       <div class="address_container">

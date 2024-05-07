@@ -31,10 +31,7 @@
         </div>
       </div>
       <p class="normal_body margin-top">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti consectetur magnam, dolores, id qui
-        dolorem aliquam exercitationem repudiandae magni possimus natus at quam maiores eligendi repellat
-        recusandae
-        laborum? Iusto, officiis?
+ Wij zijn Tienskip, een stichting die zich bezighoudt met de kloof tussen jongeren en (lokale) politiek te verminderen. Door middel van Projectdagen, de Tienskipdagen, proberen wij jongeren te bereiken door met hen een democratische uitdaging aan te gaan. De jongeren gaan bezig met problemen die zij zien in hun eigen leefomgeving, en door middel van brainstormsessies proberen zij een concrete oplossing te bedenken voor deze problemen. Samen met een groep van ongeveer 120 jonge vrijwilligers bereiken wij op jaarbasis 5000 jongeren verdeeld over verschillende regio’s in Nederland. Dus, wij zijn een stichting voor jongeren, door jongeren om zo op een laagdrempelige manier democratie behapbaar te maken voor een grote groep jongeren!
       </p>
 
       <a href="#" class="button red">Doe er zelf wat aan</a>
