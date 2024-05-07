@@ -54,7 +54,7 @@
          <footer class="blue">
 
       <div class="signup_form">
-        <a href="https://frl.us6.list-manage.com/subscribe?u=802ae56c2e7d4b7debdc2e63c&id=d391bccdb8" target="_blank">Abonneren nieuwsbrief</a>
+        <a href="https://frl.us6.list-manage.com/subscribe?u=802ae56c2e7d4b7debdc2e63c&id=d391bccdb8" target="_blank" class="signup_button">Abonneren nieuwsbrief</a>
       </div>
 
       <div class="address_container">

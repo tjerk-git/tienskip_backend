@@ -696,7 +696,7 @@ footer {
   font-family: "aglet-slab", serif;
 }
 
-.signup_form a {
+.signup_button {
   width: 100%;
   background: var(--purple);
   color: white;
