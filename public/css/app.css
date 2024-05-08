@@ -1451,6 +1451,10 @@ footer {
 
 @media (max-width: 640px) {
 
+  .cmd-info-panel {
+    width: 60%;
+  }
+
   .over-tienskip-container {
     height: 30rem;
     width: 100%;
