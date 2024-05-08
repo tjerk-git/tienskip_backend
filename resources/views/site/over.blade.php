@@ -31,7 +31,7 @@
         </div>
       </div>
       <p class="normal_body margin-top">
- Wij zijn Tienskip, een stichting die zich bezighoudt met de kloof tussen jongeren en (lokale) politiek te verminderen. Door middel van Projectdagen, de Tienskipdagen, proberen wij jongeren te bereiken door met hen een democratische uitdaging aan te gaan. De jongeren gaan bezig met problemen die zij zien in hun eigen leefomgeving, en door middel van brainstormsessies proberen zij een concrete oplossing te bedenken voor deze problemen. Samen met een groep van ongeveer 120 jonge vrijwilligers bereiken wij op jaarbasis 5000 jongeren verdeeld over verschillende regio’s in Nederland. Dus, wij zijn een stichting voor jongeren, door jongeren om zo op een laagdrempelige manier democratie behapbaar te maken voor een grote groep jongeren!
+ Wij zijn Tienskip, een stichting die zich bezighoudt met de kloof tussen jongeren en (lokale) politiek te verminderen. <br><br> Door middel van Projectdagen, de Tienskipdagen, proberen wij jongeren te bereiken door met hen een democratische uitdaging aan te gaan. De jongeren gaan bezig met problemen die zij zien in hun eigen leefomgeving, en door middel van brainstormsessies proberen zij een concrete oplossing te bedenken voor deze problemen. <br><br> Samen met een groep van ongeveer 120 jonge vrijwilligers bereiken wij op jaarbasis 5000 jongeren verdeeld over verschillende regio’s in Nederland. Dus, wij zijn een stichting voor jongeren, door jongeren om zo op een laagdrempelige manier democratie behapbaar te maken voor een grote groep jongeren!
       </p>
 
       <a href="#" class="button red">Doe er zelf wat aan</a>
@@ -44,9 +44,21 @@
 
 <x-missie />
 
+<section class="visie_mobile">
+<h2><span class="red_box">Visie</span></h2>
+<img src="/images/10.webp">
+      <p>
+"Volgens onze visie is democratie iets wat je niet uit de schoolboeken kan leren, maar in de praktijk moet ervaren. Ook is democratie  een groot goed, wat we veel te vaak te klein maken. Daarnaast volgen we naast ons motto “doe er zelf wat aan” ook het gedachtegoed: “Vertrouwen komt te voet en gaat te paard.” Daarom werken wij aan een zestal uitdagingen om onze missie, het behapbaar maken van democratie."
+      </p>
+
+  <h3>Meer weten?</h3>
+  <a href="#" class="button red">Download het bedrijfsplan</a>
+</div>
+</section>
+
 <section class="visie">
   <div class="visie_container">
-    <img src="/images/10.webp" class="image_red_filter">
+    <img src="/images/10.webp">
     <h2><span class="red_box visie_text">Visie</span></h2>
 
     <div class="purple_content">

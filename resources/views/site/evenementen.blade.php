@@ -24,6 +24,8 @@
           <h1>Geplande evenementen:</h1>
         </div>
 
+        
+
         <x-event_slider :events=$events></x-event_slider>
 
         <div class="impression_container">
@@ -92,6 +94,15 @@
         <div class="text-bg bg-purple right-text">
           Evenementen
         </div>
+      </div>
+
+            <div class="mobile_events">
+        @foreach ($events->take(5) as $event)
+          <div class="mobile_event">
+            <h3>{{ $event->name }} - <time>{{ $event->start_date->isoFormat('D MMMM') }}</time></h3>
+            <p>{{ $event->province }}</p>
+          </div>
+        @endforeach
       </div>
       <div id="tienskip__map">
         <div class="jsmaps-wrapper" id="map"></div>

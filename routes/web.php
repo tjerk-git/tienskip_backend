@@ -31,7 +31,8 @@ Route::get('/contact', function () {
 Route::post('/contact', [SiteController::class, 'store']);
 
 Route::get('/doe-er-zelf-wat-aan', function () {
-  return view('site.doe-er-zelf');
+  $events = Event::all();
+  return view('site.doe-er-zelf', ['events' => $events]);
 });
 
 Route::get('/evenementen', function () {

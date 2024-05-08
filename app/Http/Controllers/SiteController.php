@@ -15,6 +15,8 @@ class SiteController extends Controller
     return view('site.index', ['events' => $events]);
   }
 
+  
+
   // store the contact form
   public function store(Request $request)
   {

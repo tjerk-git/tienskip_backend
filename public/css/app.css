@@ -180,7 +180,7 @@ nav ul li a:hover:after {
 }
 
 .mobile_menu nav ul li a {
-  font-size: 4rem;
+  font-size: 2.6rem;
 }
 
 section {
@@ -291,7 +291,7 @@ swiper-container {
 
 .purple-backdrop {
   background: var(--purple);
-  height: 150vh;
+  height: 170vh;
   width: 100%;
   position: absolute;
   top: 45%;
@@ -433,9 +433,9 @@ h2 {
 }
 
 .impression_container {
-  margin-top: 15rem;
+  margin-top: 10rem;
   display: flex;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 }
 
 .button {
@@ -603,8 +603,8 @@ svg {
 
 .split_card {
   width: 50%;
-  min-width: 50rem;
-  min-height: 60rem;
+  min-width: 40rem;
+  min-height: 50rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1343,6 +1343,29 @@ footer {
   display: none;
 }
 
+.mobile_events {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mobile_event {
+  background: white;
+  width: 100%;
+  padding: 1rem;
+}
+
+.visie_mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  background: var(--purple);
+  color: white;
+}
+
 @media (orientation: portrait) and (max-width: 640px) {
   .cmd-new-btn {
     top: 7.5vw;
@@ -1426,6 +1449,55 @@ footer {
 
 @media (max-width: 640px) {
 
+  .over-tienskip-container {
+    height: 30rem;
+    width: 100%;
+  }
+
+  .impression_container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .tienskip_dag_container {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .tienskip_image {
+    display: none;
+  }
+
+  .visie {
+    display: none;
+  }
+
+  .visie_mobile {
+    display: flex;
+  }
+
+  .margin-top {
+    margin-top: 0;
+  }
+
+  .split_card_blue {
+    top: -8rem;
+  }
+
+  .text-bg {
+    font-size: 2rem;
+  }
+
+  .logo_container {
+    margin-top: 4rem;
+  }
+
+  .float-video-container {
+    display: none;
+  }
+
   html {
     font-size: 50%;
   }
@@ -1433,6 +1505,15 @@ footer {
   .menu__container {
     display: none;
   }
+
+  .our_events {
+    padding: 2rem;
+  }
+
+  .mobile_events {
+    display: flex;
+  }
+
 
   .mobile_menu {
     display: block;
@@ -1454,6 +1535,10 @@ footer {
     flex-direction: column;
   }
 
+  footer {
+    padding: 4rem;
+  }
+
   .signup_form {
     display: none;
   }
@@ -1472,6 +1557,26 @@ footer {
 
   .blue_special_box {
     bottom: 1%;
+  }
+
+  .missie_container {
+    padding: 4rem;
+  }
+
+  .doe-er-zelf-container {
+    height: 32rem;
+  }
+
+  .number {
+    left: -35px;
+  }
+
+  .cards_container {
+    flex-direction: column;
+  }
+
+  .side_container {
+    bottom: 76%;
   }
 
   header {
