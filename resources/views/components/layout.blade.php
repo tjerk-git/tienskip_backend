@@ -90,7 +90,9 @@
       </div>
 
       <div class="logo_footer">
-        <img src="/images/tienskip_wit.png" alt="Tienskip logo">
+        <a href="/">
+          <img src="/images/tienskip_wit.png" alt="Tienskip logo">
+        </a>
       </div>
 
     </footer>
