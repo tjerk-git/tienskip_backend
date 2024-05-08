@@ -15,7 +15,7 @@
            @if ($nextEvent)
               {{ $nextEvent->start_date->isoFormat('D MMMM') }}
             @else
-              coming soon
+              binnenkort
             @endif
           </div>
             <div class="text-bg bg-blue right-text">
