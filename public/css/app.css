@@ -1242,6 +1242,19 @@ footer {
   top: 0;
 }
 
+.mobile_events {
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mobile_event {
+  background: white;
+  width: 100%;
+  padding: 1rem;
+}
+
 @media (orientation: portrait) and (max-width: 640px) {
   .cmd-person {
     width: 16vw;
@@ -1343,21 +1356,10 @@ footer {
   display: none;
 }
 
-.mobile_events {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
 
-.mobile_event {
-  background: white;
-  width: 100%;
-  padding: 1rem;
-}
 
 .visie_mobile {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
