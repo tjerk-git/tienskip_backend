@@ -57,6 +57,7 @@ var SiteManager = {
         aPeople: [],
         myNewPersonBtn: $(".js-drop-docent"),
         myPeopleData: [],
+        myFilteredPeopleData: [],
         bNewButtonActive: !1,
         init: function () {
 
@@ -86,49 +87,61 @@ var SiteManager = {
         },
         onPeopleDataLoaded: function (e) {
 
-            this.activateNewButton(), (this.myPeopleData = e), SiteManager.shuffleArray(this.myPeopleData);
+            this.activateNewButton();
+            this.myPeopleData = e;
+            this.myFilteredPeopleData = e;
             this.nCurrentPersonID = 0;
 
 
         },
         onNewClicked: function (filterId, filterValue) {
-            //this.addPerson();
-            this.nCurrentPersonID = 0;
 
-            //console.log('filter clicked');
+
             this.clearAllPeople();
 
-            let toDisplayPeople = this.myPeopleData;
+            this.myFilteredPeopleData = [];
+
+            console.log(filterId);
 
             switch (filterId) {
                 case 'member_since':
-                    toDisplayPeople = toDisplayPeople.filter(function (el) {
-                        return el.member_since == filterValue;
-                    });
+                    if (filterValue === '#') {
+                        this.myFilteredPeopleData = this.myPeopleData;
+                    } else {
+                        this.myFilteredPeopleData = this.myPeopleData.filter(function (el) {
+                            return el.member_since >= filterValue;
+                        });
+                    }
                     break;
                 case 'member_fact':
-                    toDisplayPeople = toDisplayPeople.filter(function (el) {
-                        return el.fact == filterValue;
-                    });
+                    if (filterValue === '#') {
+                        this.myFilteredPeopleData = this.myPeopleData;
+                    } else {
+                        this.myFilteredPeopleData = this.myPeopleData.filter(function (el) {
+                            return el.fact == filterValue;
+                        });
+                    }
                     break;
                 case 'member_role':
-                    toDisplayPeople = toDisplayPeople.filter(function (el) {
-                        return el.description == filterValue;
-                    });
-                    break;
-                case '#':
-                    toDisplayPeople = this.myPeopleData;
+                    if (filterValue === '#') {
+                        this.myFilteredPeopleData = this.myPeopleData;
+                    } else {
+                        this.myFilteredPeopleData = this.myPeopleData.filter(function (el) {
+                            return el.description == filterValue;
+                        });
+                    }
                     break;
                 // Add more cases for other filters if needed
                 default:
-                    //toDisplayPeople = this.myPeopleData;
+                    //console.log('DEFAULT');
+                    this.myFilteredPeopleData = this.myPeopleData.concat([]);
                     break;
             }
 
             // console.log(toDisplayPeople);
 
 
-            for (var i = 0; i < toDisplayPeople.length; i++) {
+            for (var i = 0; i < this.myFilteredPeopleData.length; i++) {
                 this.addPerson();
             }
 
@@ -138,16 +151,16 @@ var SiteManager = {
             this.myContainer.append('<div id="cmd-person-' + this.nCurrentPersonID + '" class="cmd-person --' + 'circle"></div>');
             var t = $("#cmd-person-" + this.nCurrentPersonID);
             this.aPeople.push({ id: this.nCurrentPersonID, div: t, body: PhysicsManager.addPersonPhysicsObject(e) }),
-                console.log("this.myPeopleData[this.nCurrentPersonID]", this.myPeopleData[this.nCurrentPersonID], this.myPeopleData, this.nCurrentPersonID);
-            var n = this.myPeopleData[this.nCurrentPersonID].email;
-            t.css({ backgroundImage: 'url("' + this.myPeopleData[this.nCurrentPersonID].avatar })
+                console.log("this.myFilteredPeopleData[this.nCurrentPersonID]", this.myFilteredPeopleData[this.nCurrentPersonID], this.myFilteredPeopleData, this.nCurrentPersonID);
+            var n = this.myFilteredPeopleData[this.nCurrentPersonID].email;
+            t.css({ backgroundImage: 'url("' + this.myFilteredPeopleData[this.nCurrentPersonID].avatar })
             n &&
                 SiteManager.mob ? t.on("touchstart", this.onPersonClicked.bind(this)) : t.on("mousedown", this.onPersonClicked.bind(this)),
                 this.nCurrentPersonID++,
-                this.nCurrentPersonID == this.myPeopleData.length && this.deActivateNewButton();
+                this.nCurrentPersonID == this.myFilteredPeopleData.length && this.deActivateNewButton();
         },
         onPersonClicked: function (e) {
-            console.log("e.currentTarget.id.substring(11)", e.currentTarget.id.substring(11)), console.log("d", this.myPeopleData[e.currentTarget.id.substring(11)]), InfoPanel.showInfo(this.myPeopleData[e.currentTarget.id.substring(11)]);
+            console.log("e.currentTarget.id.substring(11)", e.currentTarget.id.substring(11)), console.log("d", this.myFilteredPeopleData[e.currentTarget.id.substring(11)]), InfoPanel.showInfo(this.myFilteredPeopleData[e.currentTarget.id.substring(11)]);
         },
         onMousedUp: function () {
             InfoPanel.hideInfo();
@@ -156,7 +169,7 @@ var SiteManager = {
 
             $(".cmd-person").off("mousedown"),
                 this.myContainer.html(""),
-                0 == this.myPeopleData.length ? this.deActivateNewButton() : this.activateNewButton(),
+                0 == this.myFilteredPeopleData.length ? this.deActivateNewButton() : this.activateNewButton(),
                 (this.nCurrentPersonID = 0),
                 (this.aPeople = []);
         },

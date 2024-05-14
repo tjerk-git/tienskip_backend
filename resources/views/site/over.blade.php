@@ -82,10 +82,10 @@ Volgens onze visie is democratie iets wat je niet uit de schoolboeken kan leren,
 <section class="ballenbak">
   <h2><span class="red_box">Het team van Tienskip</span></h2>
 
-  <!-- <div class="filter_options">
+  <div class="filter_options">
   
     <select id="member_since" class="filterOption">
-      <option value=#" selected>Lid sinds</option>
+      <option value="#" selected>Lid sinds</option>
     @foreach ($people as $person)
       <option value="{{ $person['member_since'] }}">{{ $person['member_since'] }}</option>
     @endforeach
@@ -106,7 +106,7 @@ Volgens onze visie is democratie iets wat je niet uit de schoolboeken kan leren,
       <option value="{{ $person['description'] }}">{{ $person['description'] }}</option>
     @endforeach
     </select>
-  </div> -->
+  </div>
   <div class="cmd-info-panel">
     <div class="cmd-info-panel__text">
       <div class="cmd-info-panel__text-info js-teacher-year"></div>

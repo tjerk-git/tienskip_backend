@@ -1242,6 +1242,13 @@ footer {
   top: 0;
 }
 
+.filter_options select {
+  padding: 1rem;
+  border: none;
+  font-size: 1.8rem;
+  font-family: "aglet-slab", serif;
+}
+
 .mobile_events {
   display: none;
   flex-direction: column;

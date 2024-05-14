@@ -35,8 +35,12 @@ class PersonResource extends Resource
                     ->label('Email')
                     ->email()
                     ->nullable(),
-                Forms\Components\Textarea::make('description')
-                    ->label('Omschrijving')
+                Forms\Components\Select::make('description')
+                    ->label('Rol binnen het team')
+                    ->options([
+                        'bestuur' => 'Bestuur',
+                        'vrijwilliger' => 'Vrijwilliger',
+                    ])
                     ->nullable(),
                 Forms\Components\Textarea::make('fact')
                     ->label('Feitje')
