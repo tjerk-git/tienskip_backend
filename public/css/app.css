@@ -1240,6 +1240,7 @@ footer {
   z-index: 1;
   position: absolute;
   top: 0;
+  display: flex;
 }
 
 .filter_options select {
@@ -1284,7 +1285,7 @@ footer {
   left: 5%;
   top: 0;
   width: 30%;
-  z-index: 1;
+  z-index: 0;
   position: absolute;
 }
 
@@ -1457,7 +1458,19 @@ footer {
 @media (max-width: 640px) {
 
   .cmd-info-panel {
-    width: 60%;
+    width: 74%;
+    left: 0%;
+    top: 20%;
+    font-size: 80%;
+  }
+
+  .js-teacher-avatar {
+    display: none;
+  }
+
+  .filter_options {
+    flex-direction: column;
+    left: 0;
   }
 
   .over-tienskip-container {
