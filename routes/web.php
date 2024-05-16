@@ -12,7 +12,7 @@ Route::get('/', function () {
   $events = Event::whereNotNull('start_date')->orderBy('start_date', 'asc')->get();
 
   // get event that hasn't happened yet
-  $nextEvent = Event::whereNotNull('start_date')::where('start_date', '>', date('Y-m-d H:i:s'))->orderBy('start_date', 'asc')->first();
+  $nextEvent = Event::where('start_date', '>', date('Y-m-d H:i:s'))->orderBy('start_date', 'asc')->first();
 
   return view('site.index', ['events' => $events, 'nextEvent' => $nextEvent]);
 });
