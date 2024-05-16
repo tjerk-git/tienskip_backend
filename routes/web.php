@@ -9,10 +9,10 @@ use App\Models\Person;
 
 
 Route::get('/', function () {
-  $events = Event::all();
+  $events = Event::whereNotNull('start_date')->orderBy('date', 'asc')->get();
 
   // get event that hasn't happened yet
-  $nextEvent = Event::where('start_date', '>', date('Y-m-d H:i:s'))->orderBy('start_date', 'asc')->first();
+  $nextEvent = Event::whereNotNull('start_date')::where('start_date', '>', date('Y-m-d H:i:s'))->orderBy('start_date', 'asc')->first();
 
   return view('site.index', ['events' => $events, 'nextEvent' => $nextEvent]);
 });
@@ -31,12 +31,12 @@ Route::get('/contact', function () {
 Route::post('/contact', [SiteController::class, 'store']);
 
 Route::get('/doe-er-zelf-wat-aan', function () {
-  $events = Event::all();
+  $events = Event::whereNotNull('start_date')->orderBy('date', 'asc')->get();
   return view('site.doe-er-zelf', ['events' => $events]);
 });
 
 Route::get('/evenementen', function () {
-  $events = Event::all();
+  $events = Event::whereNotNull('start_date')->orderBy('date', 'asc')->get();
   return view('site.evenementen', ['events' => $events]);
 });
 

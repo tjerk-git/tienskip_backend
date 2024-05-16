@@ -73,7 +73,7 @@ Wij zijn Tienskip, een stichting die zich bezighoudt met de kloof tussen jongere
       <div class="mobile_events">
         @foreach ($events->take(5) as $event)
           <div class="mobile_event">
-            <h3>{{ $event->name }} - <time>{{ $event->start_date->isoFormat('D MMMM') }}</time></h3>
+            <h3>{{ $event->name }} -  @if(isset($event->start_date))<time>{{ $event->start_date->isoFormat('D MMMM') }}</time>@endif</h3>
             <p>{{ $event->province }}</p>
           </div>
         @endforeach

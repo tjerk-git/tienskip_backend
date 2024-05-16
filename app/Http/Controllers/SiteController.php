@@ -11,7 +11,7 @@ class SiteController extends Controller
 {
   public function index()
   {
-    $events = Event::orderBy('date', 'asc')->get();
+    $events = Event::whereNotNull('start_date')->orderBy('date', 'asc')->get();
     return view('site.index', ['events' => $events]);
   }
 
