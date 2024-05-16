@@ -22,18 +22,16 @@ class EventController extends Controller
     $json = new \stdClass();
     $json->provinces = [];  // Initialize the provinces array
 
-
+    $images = ['first', 'second', 'third'];
 
     // loop through the provinces and get the events
     foreach ($provinces as $province) {
-
-      $images = ['first', 'second', 'third'];
-      $random_img = $images[array_rand($images)];
 
       $events = Event::where('province', 'like', '%' . $province . '%')->orderBy('start_date', 'desc')->get();
 
       $html = "<div class='map_province'><h1 class='red_box align_center'>" . ucfirst($province) . "</h1>";
       foreach ($events as $event) {
+        $random_img = $images[array_rand($images)];
         if($event->start_date){
           $html .= "<div class='mini_event " . $random_img . "'><div class='mini_event_container'><div class='mini_event_title'>" . $event->start_date->isoFormat('D MMMM YYYY') . "</div><div class='mini_event_location'>$event->address</div></div></div>";
         }
