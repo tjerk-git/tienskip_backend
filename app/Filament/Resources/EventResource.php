@@ -30,6 +30,9 @@ class EventResource extends Resource
                 Forms\Components\TextInput::make('address')
                     ->label('Locatie')
                     ->required(),
+                Forms\Components\TextInput::make('city')
+                    ->label('Stad')
+                    ->required(),
                 Forms\Components\Select::make('province')
                     ->label('Provincie')
                     ->options([
