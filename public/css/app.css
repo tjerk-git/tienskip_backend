@@ -408,7 +408,7 @@ h2 {
   height: 60rem;
   width: 75rem;
   margin-top: -5rem;
-  background: url("/images/3.webp");
+  background: url("/images/3.png");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -417,19 +417,19 @@ h2 {
 }
 
 .team {
-  background-image: url("/images/2.webp");
+  background-image: url("/images/2.png");
 }
 
 .eenddag {
-  background-image: url("/images/9.webp");
+  background-image: url("/images/9.png");
 }
 
 .over-ons {
-  background-image: url("/images/6.webp");
+  background-image: url("/images/6.png");
 }
 
 .verschil {
-  background-image: url("/images/12.webp");
+  background-image: url("/images/12.png");
 }
 
 .impression_container {
@@ -489,7 +489,7 @@ h2 {
 .card {
   width: 35rem;
   height: 45rem;
-  background-image: url("/images/1.webp");
+  background-image: url("/images/1.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -499,15 +499,15 @@ h2 {
 }
 
 .first {
-  background-image: url("/images/8.webp");
+  background-image: url("/images/8.png");
 }
 
 .second {
-  background-image: url("/images/3.webp");
+  background-image: url("/images/3.png");
 }
 
 .third {
-  background-image: url("/images/11.webp");
+  background-image: url("/images/11.png");
 }
 
 .card_red_box {
@@ -653,13 +653,13 @@ svg {
 }
 
 .vrijwilleger_1 {
-  background: url("/images/5.webp");
+  background: url("/images/5.png");
   background-size: cover;
   background-position: center;
 }
 
 .vrijwilleger_2 {
-  background: url("/images/6.webp");
+  background: url("/images/6.png");
   background-size: cover;
   background-position: center;
 }
@@ -808,7 +808,7 @@ footer {
 .missie {
   width: 100vw;
   height: 800px;
-  background: url("/images/4.webp");
+  background: url("/images/4.png");
   background-size: cover;
   background-position: center;
 }
@@ -998,7 +998,7 @@ footer {
 }
 
 .over-tienskip-container {
-  background: url("/images/2-edit.webp");
+  background: url("/images/2-edit.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -1007,7 +1007,7 @@ footer {
 }
 
 .doe-er-zelf-container {
-  background: url("/images/6.webp");
+  background: url("/images/6.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -1131,7 +1131,7 @@ footer {
 .hero_image_container {
   position: relative;
   height: 70rem;
-  background-image: url("/images/7.webp");
+  background-image: url("/images/7.png");
   background-size: cover;
   background-position: center;
 }

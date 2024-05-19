@@ -46,7 +46,7 @@
 
 <section class="visie_mobile">
 <h2><span class="red_box">Visie</span></h2>
-<img src="/images/10.webp">
+<img src="/images/10.png">
       <p>
 "Volgens onze visie is democratie iets wat je niet uit de schoolboeken kan leren, maar in de praktijk moet ervaren. Ook is democratie  een groot goed, wat we veel te vaak te klein maken. Daarnaast volgen we naast ons motto “doe er zelf wat aan” ook het gedachtegoed: “Vertrouwen komt te voet en gaat te paard.” Daarom werken wij aan een zestal uitdagingen om onze missie, het behapbaar maken van democratie."
       </p>
@@ -58,7 +58,7 @@
 
 <section class="visie">
   <div class="visie_container">
-    <img src="/images/10.webp">
+    <img src="/images/10.png">
     <h2><span class="red_box visie_text">Visie</span></h2>
 
     <div class="purple_content">
