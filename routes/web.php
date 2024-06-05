@@ -9,13 +9,13 @@ use App\Models\Person;
 use App\Models\Redirect;
 
 
-$redirects = Redirect::all();
+// $redirects = Redirect::all();
 
-if ($redirects->count() > 0) {
-  foreach ($redirects as $redirect) {
-    Route::redirect($redirect->source, $redirect->destination);
-  }
-}
+// if ($redirects->count() > 0) {
+//   foreach ($redirects as $redirect) {
+//     Route::redirect($redirect->source, $redirect->destination);
+//   }
+// }
 
 Route::get('/', function () {
   $events = Event::whereNotNull('start_date')->where('start_date', '>', date('Y-m-d H:i:s'))->orderBy('start_date', 'asc')->get();
