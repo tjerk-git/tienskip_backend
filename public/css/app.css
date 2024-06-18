@@ -273,7 +273,7 @@ swiper-container {
 
 .blue-backdrop {
   background: var(--abe);
-  height: 135dvh;
+  height: 150dvh;
   width: 100%;
   position: absolute;
   top: 60%;
