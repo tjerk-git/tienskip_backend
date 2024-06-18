@@ -273,7 +273,7 @@ swiper-container {
 
 .blue-backdrop {
   background: var(--abe);
-  height: 135vh;
+  height: 135dvh;
   width: 100%;
   position: absolute;
   top: 60%;
@@ -282,7 +282,7 @@ swiper-container {
 
 .red-backdrop {
   background: var(--darkred);
-  height: 135vh;
+  height: 135dvh;
   width: 100%;
   position: absolute;
   top: 60%;
@@ -291,7 +291,7 @@ swiper-container {
 
 .purple-backdrop {
   background: var(--purple);
-  height: 170vh;
+  height: 170dvh;
   width: 100%;
   position: absolute;
   top: 45%;
@@ -815,7 +815,7 @@ footer {
 
 .missie_overlay {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: var(--darkred);
   opacity: 0.1;
 }
