@@ -7,6 +7,8 @@ use App\Http\Controllers\EventController;
 use App\Models\Event;
 use App\Models\Person;
 use App\Models\Redirect;
+use App\Models\Blogitem;
+use Illuminate\Http\Request;
 
 
 $redirects = Redirect::all();
@@ -54,4 +56,17 @@ Route::group(['prefix' => 'api'], function () {
   Route::get('/events', [EventController::class, 'index']);
 
   Route::get('/events/map', [EventController::class, 'map']);
+});
+
+Route::get('/succesverhalen/{slug}', function (Request $request) {
+
+  $blogitem = Blogitem::where('slug', $request->slug)->first();
+
+  // if no blogitem is found show 404
+  if (!$blogitem->title) {
+    abort(404);
+  }else{
+    return view('site.succesverhaal', ['blogitem' => $blogitem]);
+  }
+
 });

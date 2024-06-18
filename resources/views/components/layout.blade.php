@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
     <script type="module"
       src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
          <header>
@@ -63,7 +63,7 @@
       </div>
       <div class="address_container">
         <div><a href="https://www.google.com/maps/search/?api=1&query=Snekertrekweg%201" target="_blank">8912 AA Leeuwarden</a></div>
-        <div>71302227</div>
+        <div>71303227</div>
       </div>
 
       <div class="spacer"></div>
