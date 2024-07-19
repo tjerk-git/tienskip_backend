@@ -104,12 +104,12 @@ var SiteManager = {
             console.log(filterId);
 
             switch (filterId) {
-                case 'member_since':
+                case 'member_description':
                     if (filterValue === '#') {
                         this.myFilteredPeopleData = this.myPeopleData;
                     } else {
                         this.myFilteredPeopleData = this.myPeopleData.filter(function (el) {
-                            return el.member_since >= filterValue;
+                            return el.member_description >= filterValue;
                         });
                     }
                     break;
