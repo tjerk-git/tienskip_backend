@@ -87,7 +87,7 @@
     <div class="filter_options">
 
       <select id="member_since" class="filterOption">
-        <option value="#" selected>Feitje</option>
+        <option value="#" selected>Rol binnen het team</option>
         <?php $uniqueFacts = []; ?>
 
         @foreach ($people as $person)
@@ -100,7 +100,7 @@
 
 
       <select id="member_role" class="filterOption">
-        <option value="#" selected>Rol binnen het team</option>
+        <option value="#" selected>Feitje</option>
         <?php $uniqueDes = []; ?>
 
         @foreach ($people as $person)
