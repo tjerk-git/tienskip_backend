@@ -273,7 +273,7 @@ swiper-container {
 
 .blue-backdrop {
   background: var(--abe);
-  height: 150dvh;
+  height: 4000px;
   width: 100%;
   position: absolute;
   top: 60%;
@@ -610,6 +610,7 @@ svg {
   justify-content: flex-end;
   padding: 2rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .split_card_content {

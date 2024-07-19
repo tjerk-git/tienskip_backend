@@ -58,11 +58,11 @@
 
     <div class="address_container">
       <div><a href="https://www.google.com/maps/search/?api=1&query=Snekertrekweg%201" target="_blank">Snekertrekweg 1</a></div>
-      <div>KVK</div>
+      <div>KVK / RSIN </div>
     </div>
     <div class="address_container">
       <div><a href="https://www.google.com/maps/search/?api=1&query=Snekertrekweg%201" target="_blank">8912 AA Leeuwarden</a></div>
-      <div>71303227</div>
+      <div>71303227 / 858661342</div>
     </div>
 
     <div class="spacer"></div>
