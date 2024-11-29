@@ -99,8 +99,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="/js/jquery.js"></script>
-  <script src="/js/matter.min.js"></script>
-  <script src="/js/cmd-min.js"></script>
   <script src="/js/jsmaps/jsmaps-libs.js" type="text/javascript"></script>
   <script src="/js/jsmaps/jsmaps-panzoom.js" type="text/javascript"></script>
   <script src="/js/jsmaps/jsmaps.min.js" type="text/javascript"></script>

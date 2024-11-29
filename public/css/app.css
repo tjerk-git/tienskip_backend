@@ -93,6 +93,7 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  min-width:960px;
 }
 
 .menu__container {
@@ -1200,6 +1201,94 @@ footer {
 }
 
 
+.team-section {
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.team-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--purple);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    justify-items: center;
+}
+
+.team-member {
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 2rem;
+}
+
+.member-info h3 {
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+}
+
+.member-role {
+    color: var(--darkred);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+#searchInput{
+
+    padding: 1rem;
+    border: none;
+    font-size: 1.8rem;
+    font-family: "aglet-slab", serif;
+}
+
+.member-description {
+    color: var(--black);
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    
+    .member-image {
+        height: 250px;
+    }
+}
+
+
 
 .side_container {
   position: absolute;
@@ -1570,6 +1659,7 @@ footer {
 
   .video__container {
     margin-bottom: 2rem;
+    min-width:960px;
   }
 
   .missie {

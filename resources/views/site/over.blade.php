@@ -18,6 +18,47 @@
     </section>
 
 
+ <section class="team-section">
+
+    <div class="team-title">
+     <h2>Ons <span class="red_box">team</span></h2>
+     </div>
+     <div class="team-filters">
+         <input type="text" id="searchInput" placeholder="Zoeken..." class="filter-input">
+         <select id="roleFilter" class="filter-select">
+             <option value="">Alle rollen</option>
+             @foreach($people->pluck('description')->unique() as $role)
+                 <option value="{{ $role }}">{{ $role }}</option>
+             @endforeach
+         </select>
+         <select id="yearFilter" class="filter-select">
+             <option value="">Alle jaren</option>
+             @foreach($people->pluck('member_since')->unique()->sort() as $year)
+                 <option value="{{ $year }}">{{ $year }}</option>
+             @endforeach
+         </select>
+     </div>
+
+     <div class="team-grid">
+         @foreach($people as $person)
+             <div class="team-member" 
+                  data-role="{{ $person->description }}" 
+                  data-year="{{ $person->member_since }}"
+                  data-name="{{ $person->name }}">
+                 <div class="member-image">
+                     <img src="{{ Storage::url($person->avatar) }}" alt="{{ $person->name }}">
+                 </div>
+                 <div class="member-info">
+                     <h3>{{ $person->name }}</h3>
+                     <p class="member-role">{{ $person->role }}</p>
+                     <p class="member-description">{{ $person->description }}</p>
+                     <p class="member-since">lid sinds: {{ $person->member_since }}</p>
+                 </div>
+             </div>
+         @endforeach
+     </div>
+ </section>
+
     <div class="impression_container">
       <div class="tienskip_dag_container">
         <div class="big_title_container">
@@ -80,55 +121,7 @@
     </div>
   </section>
 
-
-  <section class="ballenbak">
-    <h2><span class="red_box">Het team van Tienskip</span></h2>
-
-    <div class="filter_options">
-
-      <select id="member_since" class="filterOption">
-        <option value="#" selected>Rol binnen het team</option>
-        <?php $uniqueFacts = []; ?>
-
-        @foreach ($people as $person)
-        @if (!in_array($person['fact'], $uniqueFacts))
-        <?php $uniqueFacts[] = $person['fact']; ?>
-        <option value="{{ $person['fact'] }}">{{ $person['fact'] }}</option>
-        @endif
-        @endforeach
-      </select>
-
-
-      <select id="member_role" class="filterOption">
-        <option value="#" selected>Feitje</option>
-        <?php $uniqueDes = []; ?>
-
-        @foreach ($people as $person)
-        @if (!in_array($person['description'], $uniqueDes))
-        <?php $uniqueDes[] = $person['description']; ?>
-        <option value="{{ $person['description'] }}">{{ $person['description'] }}</option>
-        @endif
-        @endforeach
-      </select>
-    </div>
-    <div class="cmd-info-panel">
-      <div class="cmd-info-panel__text">
-        <div class="cmd-info-panel__text-info js-teacher-year"></div>
-        <div class="cmd-info-panel__text-name js-teacher-name"></div>
-        <div class="cmd-info-panel__text-info js-teacher-email"></div>
-        <div class="cmd-info-panel__text-info js-teacher-avatar"></div>
-        <div class="cmd-info-panel__text-info js-teacher-info"></div>
-        <div class="cmd-info-panel__text-info js-teacher-fact"></div>
-      </div>
-    </div>
-
-    <div class="cmd-people-container">
-    </div>
-
-    <div class="cmd-new-btn js-drop-docent">
-      <div class="cmd-new-btn__graphic"></div>
-    </div>
-  </section>
+  
 
   <section class="red doe_er_wat_aan">
     <div class="doe_er_wat_aan_container">
@@ -138,3 +131,73 @@
     <x-donation />
   </section>
 </x-layout>
+
+<style>
+ .team-filters {
+     margin-bottom: 2rem;
+     display: flex;
+     gap: 1rem;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ .filter-input,
+ .filter-select {
+     padding: 0.5rem 1rem;
+     border: 1px solid #ddd;
+     border-radius: 4px;
+     font-size: 1rem;
+ }
+
+ .filter-input {
+     min-width: 200px;
+ }
+
+ .filter-select {
+     min-width: 150px;
+ }
+
+ @media (max-width: 768px) {
+     .team-filters {
+         flex-direction: column;
+         align-items: stretch;
+     }
+     
+     .filter-input,
+     .filter-select {
+         width: 100%;
+     }
+ }
+</style>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+     const searchInput = document.getElementById('searchInput');
+     const roleFilter = document.getElementById('roleFilter');
+     const yearFilter = document.getElementById('yearFilter');
+     const teamMembers = document.querySelectorAll('.team-member');
+
+     function filterMembers() {
+         const searchTerm = searchInput.value.toLowerCase();
+         const selectedRole = roleFilter.value;
+         const selectedYear = yearFilter.value;
+
+         teamMembers.forEach(member => {
+             const name = member.dataset.name.toLowerCase();
+             const role = member.dataset.role;
+             const year = member.dataset.year;
+
+             const matchesSearch = name.includes(searchTerm);
+             const matchesRole = !selectedRole || role === selectedRole;
+             const matchesYear = !selectedYear || year === selectedYear;
+
+             member.style.display = 
+                 matchesSearch && matchesRole && matchesYear ? 'block' : 'none';
+         });
+     }
+
+     searchInput.addEventListener('input', filterMembers);
+     roleFilter.addEventListener('change', filterMembers);
+     yearFilter.addEventListener('change', filterMembers);
+ });
+</script>
