@@ -18,7 +18,7 @@
     </section>
 
 
- <section class="team-section">
+ <section class="team-section bg-blue">
 
     <div class="team-title">
      <h2>Ons <span class="red_box">team</span></h2>
