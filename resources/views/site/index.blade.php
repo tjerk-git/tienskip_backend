@@ -3,8 +3,7 @@
     Tienskip
   </x-slot>
  
-<div class="blue-backdrop"></div>
-
+  <div class="blue-small-backdrop"></div>
     <main>
       <section class="video__container">
         <div class="float-video-container">

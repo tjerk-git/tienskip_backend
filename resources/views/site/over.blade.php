@@ -2,7 +2,9 @@
   <x-slot name="title">
     Over Tienskip
   </x-slot>
-  <div class="blue-backdrop"></div>
+  <div class="blue-backdrop">
+    <div class="white-backdrop"></div>
+  
 
   <main>
     <section class="over-tienskip-container radius-1">
@@ -132,6 +134,8 @@
   </section>
 </x-layout>
 
+</div>
+
 <style>
  .team-filters {
      margin-bottom: 2rem;
@@ -160,12 +164,15 @@
  @media (max-width: 768px) {
      .team-filters {
          flex-direction: column;
-         align-items: stretch;
+        max-width: 420px;
      }
      
      .filter-input,
      .filter-select {
          width: 100%;
+     }
+     .team-title{
+      text-align: left;
      }
  }
 </style>

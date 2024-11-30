@@ -4,7 +4,7 @@
     Evenementen
   </x-slot>
 
-    <div class="blue-backdrop"></div>
+    <div class="blue-backdrop">
 
     <main>
       <section class="video__container">
@@ -118,3 +118,5 @@
       <x-donation></x-donation>
     </section>
 </x-layout>
+
+</div>
