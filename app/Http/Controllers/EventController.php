@@ -27,9 +27,17 @@ class EventController extends Controller
     // loop through the provinces and get the events
     foreach ($provinces as $province) {
 
-      $events = Event::where('province', 'like', '%' . $province . '%')->orderBy('start_date', 'desc')->get();
+      $events = Event::where('province', 'like', '%' . $province . '%')
+        ->where('start_date', '>=', now())
+        ->orderBy('start_date', 'desc')
+        ->get();
 
       $html = "<div class='map_province'><h1 class='red_box align_center'>" . ucfirst($province) . "</h1>";
+
+      if($events->count() == 0){
+        $html .= '<div class="mini_event"><p class="mini_event_title">Hier zijn wij nog niet actief, of we hebben aankomende evenementen in deze provincie. </p> <p class="">Op de hoogte blijven van onze activiteiten in deze provincie? Neem <a href="/contact">contact met</a> ons op.</p></div>';
+      }
+
       foreach ($events as $event) {
         $random_img = $images[array_rand($images)];
         if($event->start_date){

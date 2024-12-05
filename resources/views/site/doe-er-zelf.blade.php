@@ -1,4 +1,3 @@
-
 <x-layout>
     <x-slot name="title">
     Doe er zelf wat aan
@@ -25,7 +24,19 @@
               </h2>
             </div>
             <p class="normal_body">
-             Ben je nu geïnspireerd? Maak dan zelf het verschil! Dit kan binnen Tienskip op veel verschillende manieren. <br><br> Als vrijwilliger ben je aanwezig op de Tineksipdagen en ben je bezig met het begeleiden van een groep tijdens de brainstormfases of kan je helpen de dag facilitair op rolletjes te laten lopen.<br><br> Ook kun je je aansluiten bij het innovatieteam! Dit is een groep mensen die 1x per maand samenkomt om te werken aan de organisatie.<br><br> Doormiddel van hele vette gastsprekers worden zij meegenomen in de wereld van de democratie en Tienskip en werken zij een jaar aan het verder helpen van de stichting Tienskip. <br><br> Ook kan je natuurlijk zelf een manier vinden om ons te helpen! Door jongeren kunnen wij jongeren verder helpen en de stap naar de democratie een stuk kleiner maken. 
+              Enthousiast geworden? Maak dan zelf het verschil! Dit kan binnen Tienskip op verschillende manieren.
+            </p>
+
+            <p class="normal_body">
+              Als vrijwilliger ben je aanwezig op de Tienskipdagen en ben je bezig met het begeleiden van een groep tijdens de brainstormfases of kan je helpen de dag facilitair op rolletjes te laten lopen.
+            </p>
+
+            <p class="normal_body">
+              Ook kun je je aansluiten bij het innovatieteam! Dit is een groep mensen die 1x per maand samenkomt om te werken aan de organisatie. Door middel van hele vette gastsprekers worden zij meegenomen in de wereld van de democratie en Tienskip en werken zij een jaar aan het verder helpen van de stichting.
+            </p>
+
+            <p class="normal_body">
+              Om je betrokkenheid bij Tienskip concreet te maken kun je Vriend van Tienskip worden! Hiermee krijg je toegang tot mooie kortingen bij verschillende winkels en horeca, maar word je ook betrokken bij het exclusieve vriendennetwerk van Tienskip.
             </p>
 
             <a href="#" class="button blue">Help zelf ook mee</a>
@@ -58,7 +69,7 @@
     <section class="blue our_events">
       <div class="our_events_container">
         <div class="text-bg bg-red upper-text">
-          Voorgaande
+          Aankomende
         </div>
         <div class="text-bg bg-purple right-text">
           Evenementen

@@ -31,11 +31,11 @@
         <div class="impression_container">
           <div class="tienskip_dag_container">
             <div class="big_title_container">
-              <h2>Hoe een <span class="red_box negative_margin">tienskip dag</span> eruit ziet
+              <h2>Hoe een <span class="red_box negative_margin">‘Tienskipdag’</span> eruit ziet
               </h2>
             </div>
             <p class="normal_body" data-type-speed="50">
- De Mienskip Dag, wat gaan we doen? De leerlingen komen binnen op een locatie die iets te maken heeft met de democratie of participatie. Hier krijgen zij hun eigen democratisch paspoort, een document dat zij vooraf hebben ingevuld om een probleem in hun eigen leefomgeving aan te kaarten. Dan worden ze op thema ingedeeld in groepen en begint de eerste brainstormfase: de probleemstelling. Als groep stellen zij een concreet probleem vast waaraan ze willen werken. Na een korte pauze begint de tweede fase: de oplossing. In deze fase werken ze aan een concrete oplossing die het probleem waar zij mee zitten kan oplossen. In de derde fase presenteren zij hun oplossing aan andere leerlingen, en alle aanwezige belangenorganisaties. Deze fase is verdeeld in twee delen: eerst bereiden ze in hun groep een pitch voor, en daarna pitchen ze dit aan de aanwezigen. 
+ De ‘Tienskipdag’ Dag, wat gaan we doen? De leerlingen komen binnen op een locatie die iets te maken heeft met de democratie of participatie. <p class="normal_body">Hier krijgen zij hun eigen democratisch paspoort, een document dat zij vooraf hebben ingevuld om een probleem in hun eigen leefomgeving aan te kaarten.</p> <p class="normal_body"> Dan worden ze op thema ingedeeld in groepen en begint de eerste brainstormfase: de probleemstelling. Als groep stellen zij een concreet probleem vast waaraan ze willen werken. Na een korte pauze begint de tweede fase: de oplossing. In deze fase werken ze aan een concrete oplossing die het probleem waar zij mee zitten kan oplossen. </p> <p class="normal_body"> In de derde fase presenteren zij hun oplossing aan andere leerlingen, en alle aanwezige belangenorganisaties. Deze fase is verdeeld in twee delen: eerst bereiden ze in hun groep een pitch voor, en daarna pitchen ze dit aan de aanwezigen.</p> 
             </p>
 
             <a href="#" class="button red">Help zelf ook mee</a>

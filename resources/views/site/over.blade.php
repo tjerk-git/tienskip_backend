@@ -73,9 +73,13 @@
             </div>
           </div>
         </div>
-        <p class="normal_body margin-top">
-          Wij zijn Tienskip, een stichting die zich bezighoudt met de kloof tussen jongeren en (lokale) politiek te verminderen. <br><br> Door middel van Projectdagen, de Tienskipdagen, proberen wij jongeren te bereiken door met hen een democratische uitdaging aan te gaan. De jongeren gaan bezig met problemen die zij zien in hun eigen leefomgeving, en door middel van brainstormsessies proberen zij een concrete oplossing te bedenken voor deze problemen. <br><br> Samen met een groep van ongeveer 120 jonge vrijwilligers bereiken wij op jaarbasis 5000 jongeren verdeeld over verschillende regio’s in Nederland. Dus, wij zijn een stichting voor jongeren, door jongeren om zo op een laagdrempelige manier democratie behapbaar te maken voor een grote groep jongeren!
-        </p>
+        <p class="normal_body margin-top">Wij zijn Tienskip, een stichting die zich inzet voor het verkleinen van de kloof tussen jongeren en (lokale) democratie.</p>
+            
+            <p class="normal_body">Door middel van projectdagen, de zogenoemde Tienskipdagen, proberen wij jongeren te bereiken door met hen een democratische uitdaging aan te gaan. De jongeren gaan bezig met vraagstukken die zij zien in hun eigen leefomgeving en door middel van brainstormsessies proberen zij een concrete oplossing te bedenken voor deze problemen. Dit doen zij onder begeleiding van ervaringsdeskundigen.</p>
+            
+            <p class="normal_body">Samen met een groep van ongeveer 150 jonge vrijwilligers bereiken wij op jaarbasis 10.000 jongeren verdeeld over verschillende regio's in Nederland.</p>
+
+            <p class="normal_body">Tienskip is een stichting voor en door jongeren, om zo samen te werken aan de democratie van morgen. </p>
 
         <a href="#" class="button red">Doe er zelf wat aan</a>
       </div>
@@ -91,11 +95,11 @@
     <h2><span class="red_box">Visie</span></h2>
     <img src="/images/10.png">
     <p>
-      "Volgens onze visie is democratie iets wat je niet uit de schoolboeken kan leren, maar in de praktijk moet ervaren. Ook is democratie een groot goed, wat we veel te vaak te klein maken. Daarnaast volgen we naast ons motto “doe er zelf wat aan” ook het gedachtegoed: “Vertrouwen komt te voet en gaat te paard.” Daarom werken wij aan een zestal uitdagingen om onze missie, het behapbaar maken van democratie."
+      "Volgens ons is democratie niet iets wat je van een schoolboek kunt leren, maar moet je democratie in de praktijk kunnen ervaren. Daarnaast is democratie een groot goed, dat veel te klein wordt gemaakt. Democratie is namelijk veel meer dan stemmen, links en rechts of vrijheid van meningsuiting."
     </p>
 
     <h3>Meer weten?</h3>
-    <a href="https://tienskip.nl/images/Tienskip-2024-2028.pdf" class="button red">Download het bedrijfsplan</a>
+    <a href="https://tienskip.nl/images/Tienskip-2024-2028.pdf" class="button red">Download ons meerjarenplan</a>
 
     </div>
   </section>
