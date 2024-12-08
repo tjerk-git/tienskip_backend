@@ -35,7 +35,7 @@
          </select>
          <select id="yearFilter" class="filter-select">
              <option value="">Alle jaren</option>
-             @foreach($people->pluck('member_since')->unique()->sort() as $year)
+             @foreach($people->pluck('member_since')->filter()->unique()->sort() as $year)
                  <option value="{{ $year }}">{{ $year }}</option>
              @endforeach
          </select>
@@ -54,7 +54,9 @@
                      <h3>{{ $person->name }}</h3>
                      <p class="member-role">{{ $person->role }}</p>
                      <p class="member-description">{{ $person->description }}</p>
-                     <p class="member-since">lid sinds: {{ $person->member_since }}</p>
+                     @if($person->member_since)
+                        <p class="member-since">lid sinds: {{ $person->member_since }}</p>
+                     @endif
                  </div>
              </div>
          @endforeach

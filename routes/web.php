@@ -38,6 +38,10 @@ Route::get('/contact', function () {
   return view('site.contact');
 });
 
+Route::get('/profiel-updaten', function () {
+  return view('site.freewilly');
+});
+
 // post to contact 
 Route::post('/contact', [SiteController::class, 'store']);
 
@@ -52,10 +56,13 @@ Route::get('/evenementen', function () {
 });
 
 Route::group(['prefix' => 'api'], function () {
-  Route::get('/people', [PeopleController::class, 'index']);
   Route::get('/events', [EventController::class, 'index']);
 
   Route::get('/events/map', [EventController::class, 'map']);
+
+  // Profile routes
+  Route::get('/people/search', [PeopleController::class, 'search'])->name('people.search');
+  Route::put('/people/update', [PeopleController::class, 'update'])->name('people.update');
 });
 
 Route::get('/succesverhalen/{slug}', function (Request $request) {
