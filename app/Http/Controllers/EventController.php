@@ -41,7 +41,19 @@ class EventController extends Controller
       foreach ($events as $event) {
         $random_img = $images[array_rand($images)];
         if($event->start_date){
-          $html .= "<div class='mini_event " . $random_img . "'><div class='mini_event_container'><div class='mini_event_title'>" . $event->start_date->isoFormat('D MMMM YYYY') . "</div><div class='mini_event_location'>$event->city</div></div></div>";
+          $html .= "
+          <a href='https://tienskip.nl/aanmelden' target='_blank'>
+            <div class='mini_event " . $random_img . "'>
+              <div class='mini_event_container'>
+                <div class='mini_event_title'>
+                  " . $event->start_date->isoFormat('D MMMM YYYY') . "
+                </div>
+                <div class='mini_event_location'>
+                  $event->city
+                </div>
+              </div>
+            </div>
+          </a>";
         }
       }
       $html .= "</div>";

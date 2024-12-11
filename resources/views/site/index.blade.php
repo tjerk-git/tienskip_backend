@@ -76,10 +76,12 @@
 
       <div class="mobile_events">
         @foreach ($events->take(5) as $event)
+        <a href="https://tienskip.nl/aanmelden" target="_blank">
           <div class="mobile_event">
             <h3>{{ $event->name }} -  @if(isset($event->start_date))<time>{{ $event->start_date->isoFormat('D MMMM') }}</time>@endif</h3>
             <p>{{ $event->province }}</p>
           </div>
+        </a>
         @endforeach
       </div>
 

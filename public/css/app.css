@@ -93,7 +93,6 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  min-width:960px;
 }
 
 .menu__container {
@@ -289,7 +288,7 @@ swiper-container {
 
 .blue-small-backdrop {
   background: var(--abe);
-  height: 135dvh;
+  height: 140dvh;
   width: 100%;
   position: absolute;
   top: 60%;
@@ -1367,6 +1366,12 @@ footer {
   margin-top: 2rem;
 }
 
+.mobile_events a{
+  text-decoration: none;
+  color:black;
+  cursor: pointer;
+}
+
 .mobile_event {
   background: white;
   width: 100%;
@@ -1679,7 +1684,7 @@ footer {
 
   .video__container {
     margin-bottom: 2rem;
-    min-width:960px;
+    width:100%;
   }
 
   .missie {
