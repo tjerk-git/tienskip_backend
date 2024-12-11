@@ -23,7 +23,7 @@
  <section class="team-section bg-blue">
 
     <div class="team-title">
-     <h2>Ons <span class="red_box">team</span></h2>
+     <h2>Vrienden <span class="red_box">boek</span></h2>
      </div>
      <div class="team-filters">
          <input type="text" id="searchInput" placeholder="Zoeken..." class="filter-input">

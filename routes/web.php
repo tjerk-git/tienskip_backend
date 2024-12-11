@@ -4,6 +4,7 @@ use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PeopleController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\PartnerController;
 use App\Models\Event;
 use App\Models\Person;
 use App\Models\Redirect;
@@ -76,4 +77,10 @@ Route::get('/succesverhalen/{slug}', function (Request $request) {
     return view('site.succesverhaal', ['blogitem' => $blogitem]);
   }
 
+});
+
+Route::get('/partners', [App\Http\Controllers\PartnerController::class, 'index'])->name('partners');
+
+Route::middleware('auth')->group(function () {
+    // Add routes that require authentication here
 });
