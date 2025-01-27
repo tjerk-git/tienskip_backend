@@ -74,6 +74,11 @@
         </div>
       </div>
 
+      <div class="visitor-counter">
+        <span>Aantal bezoekers tot nu toe:</span>
+        <span class="counter-number" data-target="{{ 3000 }}">0</span>
+      </div>
+
       <div class="mobile_events">
         @foreach ($events->take(5) as $event)
         <a href="https://tienskip.nl/aanmelden" target="_blank">

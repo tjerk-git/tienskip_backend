@@ -47,5 +47,38 @@ $(document).ready(function () {
   });
 
 
+
+  const counters = document.querySelectorAll('.counter-number');
+      
+  const animateCounter = (counter, target) => {
+    let current = 0;
+    const increment = target / 50; // Divide animation into 50 steps
+    const timer = setInterval(() => {
+      current += increment;
+      counter.textContent = Math.round(current);
+      counter.classList.add('animate-count');
+      
+      if (current >= target) {
+        counter.textContent = target;
+        clearInterval(timer);
+      }
+    }, 20);
+  };
+
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = parseInt(counter.getAttribute('data-target'));
+        animateCounter(counter, target);
+        observer.unobserve(counter); // Only animate once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // Observe all counters
+  counters.forEach(counter => observer.observe(counter));
+
 });
 

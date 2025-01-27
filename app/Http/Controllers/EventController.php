@@ -29,7 +29,7 @@ class EventController extends Controller
 
       $events = Event::where('province', 'like', '%' . $province . '%')
         ->where('start_date', '>=', now())
-        ->orderBy('start_date', 'desc')
+        ->orderBy('start_date', 'asc')
         ->get();
 
       $html = "<div class='map_province'><h1 class='red_box align_center'>" . ucfirst($province) . "</h1>";

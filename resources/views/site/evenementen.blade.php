@@ -1,8 +1,8 @@
-
 <x-layout>
   <x-slot name="title">
     Evenementen
   </x-slot>
+
 
     <div class="blue-backdrop">
 
@@ -30,6 +30,8 @@
 
         <div class="impression_container">
           <div class="tienskip_dag_container">
+
+            
             <div class="big_title_container">
               <h2>Hoe een <span class="red_box negative_margin">‘Tienskipdag’</span> eruit ziet
               </h2>
@@ -89,12 +91,18 @@
     <section class="blue our_events">
       <div class="our_events_container">
         <div class="text-bg bg-red upper-text">
-          Voorgaande
+          Aankomende
         </div>
         <div class="text-bg bg-purple right-text">
           Evenementen
         </div>
       </div>
+
+      <div class="visitor-counter">
+        <span>Aantal bezoekers tot nu toe:</span>
+        <span class="counter-number" data-target="{{ 3000 }}">0</span>
+      </div>
+
 
             <div class="mobile_events">
         @foreach ($events->take(5) as $event)
