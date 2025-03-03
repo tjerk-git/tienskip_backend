@@ -40,6 +40,7 @@ class PersonResource extends Resource
                     ->options([
                         'bestuur' => 'Bestuur',
                         'vrijwilliger' => 'Vrijwilliger',
+                        'werknemer' => 'Werknemer',
                     ])
                     ->nullable(),
                 Forms\Components\Textarea::make('fact')

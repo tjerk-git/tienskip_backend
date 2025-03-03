@@ -37,6 +37,7 @@
                             <select class="form-control" id="description" name="description" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
                                 <option value="vrijwilliger">Vrijwilliger</option>
                                 <option value="bestuur">Bestuur</option>
+                                <option value="werknemer">Werknemer</option>
                             </select>
                         </div>
 
