@@ -63,8 +63,8 @@
      </div>
  </section>
 
-    <div class="impression_container">
-      <div class="tienskip_dag_container">
+    <div class="impression_container flex-container">
+      <div class="tienskip_dag_container flex-item">
         <div class="big_title_container">
           <div class="float-video-container">
             <div class="text-bg bg-purple upper-text">
@@ -86,7 +86,7 @@
         <a href="#" class="button red">Doe er zelf wat aan</a>
       </div>
 
-      <div class="tienskip_image over-ons radius-2"></div>
+      <div class="tienskip_image over-ons radius-2 flex-item"></div>
     </div>
 
   </main>
