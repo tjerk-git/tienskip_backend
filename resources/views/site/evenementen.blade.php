@@ -28,8 +28,8 @@
 
         <x-event_slider :events=$events></x-event_slider>
 
-        <div class="impression_container">
-          <div class="tienskip_dag_container">
+        <div class="impression_container flex-container">
+          <div class="tienskip_dag_container flex-item">
 
             
             <div class="big_title_container">
@@ -43,7 +43,7 @@
             <a href="#" class="button red">Help zelf ook mee</a>
           </div>
 
-          <div class="tienskip_image eenddag radius-2"></div>
+          <div class="tienskip_image eenddag radius-2 flex-item"></div>
         </div>
 
       </section>
