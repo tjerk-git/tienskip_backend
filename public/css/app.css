@@ -218,7 +218,7 @@ section {
 }
 
 swiper-slide {
-    height: 125px;
+    height: 100px;
     display: flex;
     padding: 2rem;
     background: white;
@@ -236,7 +236,7 @@ swiper-slide time {
 }
 
 swiper-slide h3 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-top: -1rem;
 }
