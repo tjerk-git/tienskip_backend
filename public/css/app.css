@@ -218,7 +218,7 @@ section {
 }
 
 swiper-slide {
-    height: 100px;
+    height: 125px;
     display: flex;
     padding: 2rem;
     background: white;
