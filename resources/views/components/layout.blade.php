@@ -73,7 +73,7 @@
 
     </div>
     <div class="address_container">
-      <div>0582300669</div>
+      <div>06 17 66 14 66</div>
       <div>Jaarrekening</div>
     </div>
 
