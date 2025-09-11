@@ -74,7 +74,7 @@
 
     <div class="visitor-counter">
       <span>Aantal bezoekers tot nu toe:</span>
-      <span class="counter-number" data-target="{{ 10.000 }}">0</span>
+      <span class="counter-number" data-target="{{ 10000 }}">0</span>
     </div>
 
     <div class="mobile_events">
