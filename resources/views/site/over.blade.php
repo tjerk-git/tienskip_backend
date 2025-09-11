@@ -20,8 +20,78 @@
     </section>
 
 
- <section class="team-section bg-blue">
 
+
+ <div class="impression_container flex-container">
+      <div class="tienskip_dag_container flex-item">
+        <div class="big_title_container">
+          <div class="float-video-container">
+            <div class="text-bg bg-purple upper-text">
+              Over
+            </div>
+            <div class="text-bg bg-red right-text">
+              Ons
+            </div>
+          </div>
+        </div>
+        <p class="normal_body margin-top">Wij zijn Tienskip, een stichting die zich inzet voor het verkleinen van de kloof tussen jongeren en (lokale) democratie.</p>
+            
+            <p class="normal_body">Door middel van projectdagen, de zogenoemde Tienskipdagen, proberen wij jongeren te bereiken door met hen een democratische uitdaging aan te gaan. De jongeren gaan bezig met vraagstukken die zij zien in hun eigen leefomgeving en door middel van brainstormsessies proberen zij een concrete oplossing te bedenken voor deze problemen. Dit doen zij onder begeleiding van ervaringsdeskundigen.</p>
+            
+            <p class="normal_body">Samen met een groep van ongeveer 150 jonge vrijwilligers bereiken wij op jaarbasis 10.000 jongeren verdeeld over verschillende regio's in Nederland.</p>
+
+            <p class="normal_body">Tienskip is een stichting voor en door jongeren, om zo samen te werken aan de democratie van morgen. </p>
+
+        <a href="#" class="button red">Doe er zelf wat aan</a>
+      </div>
+
+      <div class="tienskip_image over-ons radius-2 flex-item"></div>
+    </div>
+
+  </main>
+
+  <x-missie />
+
+  <section class="visie_mobile">
+    <h2><span class="red_box">Visie</span></h2>
+    <img src="/images/10.png">
+    <p>
+      "Volgens ons is democratie niet iets wat je van een schoolboek kunt leren, maar moet je democratie in de praktijk kunnen ervaren. Daarnaast is democratie een groot goed, dat veel te klein wordt gemaakt. Democratie is namelijk veel meer dan stemmen, links en rechts of vrijheid van meningsuiting."  - bestuur Tienskip
+    </p>
+   
+
+    <h3>Meer weten?</h3>
+    <a href="https://tienskip.nl/images/Tienskip-2024-2028.pdf" class="button red">Download ons meerjarenplan</a>
+
+    </div>
+  </section>
+
+  <section class="visie">
+    <div class="visie_container">
+      <img src="/images/10.png">
+      <h2><span class="red_box visie_text">Visie</span></h2>
+
+      <div class="purple_content">
+
+        <sl-icon class="quote_icon upper_quote" name="quote"></sl-icon>
+        <p>
+          Volgens onze visie is democratie iets wat je niet uit de schoolboeken kan leren, maar in de praktijk moet ervaren. Ook is democratie een groot goed, wat we veel te vaak te klein maken. Daarnaast volgen we naast ons motto “doe er zelf wat aan” ook het gedachtegoed: “Vertrouwen komt te voet en gaat te paard.” Daarom werken wij aan een zestal uitdagingen om onze missie, het behapbaar maken van democratie.
+          - Bestuur Tienskip
+        </p>
+        <sl-icon class="quote_icon lower_quote" name="quote"></sl-icon>
+      </div>
+
+      <div class="meer_weten_container">
+        <h3>Meer weten?</h3>
+        <a href="https://tienskip.nl/images/Tienskip-2024-2028.pdf" class="button red">Download het bedrijfsplan</a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="team-section bg-blue">
     <div class="team-title">
      <h2>Vrienden <span class="red_box">boek</span></h2>
      </div>
@@ -58,76 +128,19 @@
                         <p class="member-since">lid sinds: {{ $person->member_since }}</p>
                      @endif
                  </div>
+                 @if($person->fact)
+                     <div class="fact-tooltip">
+                         <div class="fact-bubble">
+                             <div class="fact-text">💡 {{ $person->fact }}</div>
+                             <div class="fact-arrow"></div>
+                         </div>
+                     </div>
+                 @endif
              </div>
          @endforeach
      </div>
  </section>
 
-    <div class="impression_container flex-container">
-      <div class="tienskip_dag_container flex-item">
-        <div class="big_title_container">
-          <div class="float-video-container">
-            <div class="text-bg bg-purple upper-text">
-              Over
-            </div>
-            <div class="text-bg bg-red right-text">
-              Ons
-            </div>
-          </div>
-        </div>
-        <p class="normal_body margin-top">Wij zijn Tienskip, een stichting die zich inzet voor het verkleinen van de kloof tussen jongeren en (lokale) democratie.</p>
-            
-            <p class="normal_body">Door middel van projectdagen, de zogenoemde Tienskipdagen, proberen wij jongeren te bereiken door met hen een democratische uitdaging aan te gaan. De jongeren gaan bezig met vraagstukken die zij zien in hun eigen leefomgeving en door middel van brainstormsessies proberen zij een concrete oplossing te bedenken voor deze problemen. Dit doen zij onder begeleiding van ervaringsdeskundigen.</p>
-            
-            <p class="normal_body">Samen met een groep van ongeveer 150 jonge vrijwilligers bereiken wij op jaarbasis 10.000 jongeren verdeeld over verschillende regio's in Nederland.</p>
-
-            <p class="normal_body">Tienskip is een stichting voor en door jongeren, om zo samen te werken aan de democratie van morgen. </p>
-
-        <a href="#" class="button red">Doe er zelf wat aan</a>
-      </div>
-
-      <div class="tienskip_image over-ons radius-2 flex-item"></div>
-    </div>
-
-  </main>
-
-  <x-missie />
-
-  <section class="visie_mobile">
-    <h2><span class="red_box">Visie</span></h2>
-    <img src="/images/10.png">
-    <p>
-      "Volgens ons is democratie niet iets wat je van een schoolboek kunt leren, maar moet je democratie in de praktijk kunnen ervaren. Daarnaast is democratie een groot goed, dat veel te klein wordt gemaakt. Democratie is namelijk veel meer dan stemmen, links en rechts of vrijheid van meningsuiting."
-    </p>
-
-    <h3>Meer weten?</h3>
-    <a href="https://tienskip.nl/images/Tienskip-2024-2028.pdf" class="button red">Download ons meerjarenplan</a>
-
-    </div>
-  </section>
-
-  <section class="visie">
-    <div class="visie_container">
-      <img src="/images/10.png">
-      <h2><span class="red_box visie_text">Visie</span></h2>
-
-      <div class="purple_content">
-
-        <sl-icon class="quote_icon upper_quote" name="quote"></sl-icon>
-        <p>
-          Volgens onze visie is democratie iets wat je niet uit de schoolboeken kan leren, maar in de praktijk moet ervaren. Ook is democratie een groot goed, wat we veel te vaak te klein maken. Daarnaast volgen we naast ons motto “doe er zelf wat aan” ook het gedachtegoed: “Vertrouwen komt te voet en gaat te paard.” Daarom werken wij aan een zestal uitdagingen om onze missie, het behapbaar maken van democratie.
-        </p>
-        <sl-icon class="quote_icon lower_quote" name="quote"></sl-icon>
-      </div>
-
-      <div class="meer_weten_container">
-        <h3>Meer weten?</h3>
-        <a href="https://tienskip.nl/images/Tienskip-2024-2028.pdf" class="button red">Download het bedrijfsplan</a>
-
-      </div>
-
-    </div>
-  </section>
 
   
 
@@ -167,6 +180,76 @@
      min-width: 150px;
  }
 
+ /* Fact Tooltip Styles */
+ .team-member {
+     position: relative;
+     cursor: pointer;
+ }
+
+ .team-member:hover {
+     overflow: visible !important;
+ }
+
+ .team-grid:has(.team-member:hover) {
+     overflow: visible !important;
+ }
+
+ .team-section:has(.team-member:hover) {
+     overflow: visible !important;
+ }
+
+ .fact-tooltip {
+     position: absolute;
+     top: -20px;
+     left: 50%;
+     transform: translateX(-50%);
+     opacity: 0;
+     visibility: hidden;
+     transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                 visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                 transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+     z-index: 9999;
+     pointer-events: none;
+ }
+
+ .team-member:hover .fact-tooltip {
+     opacity: 1;
+     visibility: visible;
+     transform: translateX(-50%) translateY(-15px);
+ }
+
+ .fact-bubble {
+     position: relative;
+     background: linear-gradient(135deg, #7d3f96 0%, #35abe2 100%);
+     color: white;
+     padding: 12px 16px;
+     border-radius: 12px;
+     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+     white-space: normal;
+     max-width: 300px;
+     min-width: 200px;
+     text-align: center;
+     word-wrap: break-word;
+ }
+
+ .fact-text {
+     font-size: 1.1rem;
+     font-weight: 500;
+     line-height: 1.4;
+ }
+
+ .fact-arrow {
+     position: absolute;
+     top: 100%;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 0;
+     height: 0;
+     border-left: 8px solid transparent;
+     border-right: 8px solid transparent;
+     border-top: 8px solid #7d3f96;
+ }
+
  @media (max-width: 768px) {
      .team-filters {
          flex-direction: column;
@@ -179,6 +262,16 @@
      }
      .team-title{
       text-align: left;
+     }
+     
+     .fact-bubble {
+         max-width: 280px;
+         min-width: 180px;
+         padding: 10px 14px;
+     }
+     
+     .fact-text {
+         font-size: 1rem;
      }
  }
 </style>

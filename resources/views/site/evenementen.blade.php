@@ -40,7 +40,7 @@
  De ‘Tienskipdag’ Dag, wat gaan we doen? De leerlingen komen binnen op een locatie die iets te maken heeft met de democratie of participatie. <p class="normal_body">Hier krijgen zij hun eigen democratisch paspoort, een document dat zij vooraf hebben ingevuld om een probleem in hun eigen leefomgeving aan te kaarten.</p> <p class="normal_body"> Dan worden ze op thema ingedeeld in groepen en begint de eerste brainstormfase: de probleemstelling. Als groep stellen zij een concreet probleem vast waaraan ze willen werken. Na een korte pauze begint de tweede fase: de oplossing. In deze fase werken ze aan een concrete oplossing die het probleem waar zij mee zitten kan oplossen. </p> <p class="normal_body"> In de derde fase presenteren zij hun oplossing aan andere leerlingen, en alle aanwezige belangenorganisaties. Deze fase is verdeeld in twee delen: eerst bereiden ze in hun groep een pitch voor, en daarna pitchen ze dit aan de aanwezigen.</p> 
             </p>
 
-            <a href="#" class="button red">Help zelf ook mee</a>
+            <a href="https://tienskip.nl/aanmelden" target="_blank" class="button red">Help zelf ook mee</a>
           </div>
 
           <div class="tienskip_image eenddag radius-2 flex-item"></div>
@@ -54,37 +54,28 @@
       <div class="succesverhalen_container">
         <h2>Onze <span class="blue_box">succesverhalen</span></h2>
 
-        <div class="cards_container">
-          <div class="card first">
-
-            <div class="card_red_box">
-              <h5 class="red_box ">Leeuwarden - 2/2/2021</h5>
-            </div>
-            <div class="card_footer">
-              <h4>Team-burnout</h4>
-            </div>
+        @if($blogitems->count() > 0)
+          <div class="cards_container">
+            @foreach($blogitems as $index => $blogitem)
+              <div class="card {{ $index == 0 ? 'first' : ($index == 1 ? 'second' : 'third') }}">
+                <a href="/succesverhalen/{{ $blogitem->slug }}" class="card-link">
+                  <div class="card_footer">
+                    <h4>{{ $blogitem->title }}</h4>
+                  </div>
+                </a>
+              </div>
+            @endforeach
           </div>
-
-          <div class="card second">
-
-            <div class="card_red_box">
-              <h5 class="red_box ">Leeuwarden - 2/2/2021</h5>
-            </div>
-            <div class="card_footer">
-              <h4>Team-burnout</h4>
-            </div>
+          
+          <div class="view-all-stories">
+            <a href="/succesverhalen" class="button blue">Alle verhalen bekijken</a>
           </div>
-
-          <div class="card third">
-
-            <div class="card_red_box">
-              <h5 class="red_box ">Leeuwarden - 2/2/2021</h5>
-            </div>
-            <div class="card_footer">
-              <h4>Team-burnout</h4>
-            </div>
+        @else
+          <div class="no-stories">
+            <p>Binnenkort meer inspirerende verhalen!</p>
+            <a href="/succesverhalen" class="button blue">Bekijk alle verhalen</a>
           </div>
-        </div>
+        @endif
       </div>
     </section>
 
@@ -100,7 +91,7 @@
 
       <div class="visitor-counter">
         <span>Aantal bezoekers tot nu toe:</span>
-        <span class="counter-number" data-target="{{ 3000 }}">0</span>
+        <span class="counter-number" data-target="{{ 10000 }}">0</span>
       </div>
 
 

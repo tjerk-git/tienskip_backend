@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.signup_button').css('background', '#CF3636');
   }
 
-  $('.work_form').slideDown(500);
+  $('.work_form').addClass('active');
 
   $('.contact_block').on('click', function () {
 
@@ -14,20 +14,12 @@ $(document).ready(function () {
     let data = $(this).data('name');
 
     if (data == 'question') {
-      // if its already down slide up
-      if ($('.question_form').is(':visible')) {
-        $('.question_form').slideUp(500);
-      } else {
-        $('.question_form').slideDown(500);
-      }
+      // Toggle the active class for smooth CSS transitions
+      $('.question_form').toggleClass('active');
     }
 
     if (data == 'work') {
-      if ($('.work_form').is(':visible')) {
-        $('.work_form').slideUp(500);
-      } else {
-        $('.work_form').slideDown(500);
-      }
+      $('.work_form').toggleClass('active');
     }
 
     // find element with class arrow-up and change name to arrow-down

@@ -19,7 +19,7 @@
           </div>
           <div class="text-bg bg-blue right-text">
             @if ($nextEvent)
-              {{ $nextEvent->province }}
+              {{ $nextEvent->city }}
             @else
               -
             @endif
@@ -74,7 +74,7 @@
 
     <div class="visitor-counter">
       <span>Aantal bezoekers tot nu toe:</span>
-      <span class="counter-number" data-target="{{ 3000 }}">0</span>
+      <span class="counter-number" data-target="{{ 10.000 }}">0</span>
     </div>
 
     <div class="mobile_events">

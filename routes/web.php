@@ -34,7 +34,7 @@ Route::get("/", function () {
 });
 
 Route::get("/over-tienskip", function () {
-    $people = Person::all();
+    $people = Person::inRandomOrder()->get();
 
     return view("site.over", ["people" => $people]);
 });
@@ -61,7 +61,13 @@ Route::get("/evenementen", function () {
     $events = Event::whereNotNull("start_date")
         ->orderBy("start_date", "asc")
         ->get();
-    return view("site.evenementen", ["events" => $events]);
+    
+    $blogitems = Blogitem::where('is_published', true)
+        ->orderBy('published_at', 'desc')
+        ->take(3)
+        ->get();
+    
+    return view("site.evenementen", ["events" => $events, "blogitems" => $blogitems]);
 });
 
 Route::group(["prefix" => "api"], function () {
@@ -76,6 +82,14 @@ Route::group(["prefix" => "api"], function () {
     Route::put("/people/update", [PeopleController::class, "update"])->name(
         "people.update"
     );
+});
+
+Route::get("/succesverhalen", function () {
+    $blogitems = Blogitem::where('is_published', true)
+        ->orderBy('published_at', 'desc')
+        ->get();
+    
+    return view("site.succesverhalen", ["blogitems" => $blogitems]);
 });
 
 Route::get("/succesverhalen/{slug}", function (Request $request) {

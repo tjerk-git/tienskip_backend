@@ -39,7 +39,7 @@
               Om je betrokkenheid bij Tienskip concreet te maken kun je Vriend van Tienskip worden! Hiermee krijg je toegang tot mooie kortingen bij verschillende winkels en horeca, maar word je ook betrokken bij het exclusieve vriendennetwerk van Tienskip.
             </p>
 
-            <a href="#" class="button blue">Help zelf ook mee</a>
+            <a href="https://tienskip.nl/aanmelden" target="_blank" class="button blue">Help zelf ook mee</a>
           </div>
 
             <div class="tienskip_image verschil radius-2"></div>
