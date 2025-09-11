@@ -22,7 +22,7 @@
         </div>
 
         <div class="side_container">
-          <div class="side_red_special_box">06 17661466</div>
+          <div class="side_red_special_box">06 17 66 14 66</div>
           <div class="side_blue_special_box"><a href="mailto:info@tienskip.nl">info@tienskip.nl</a></div>
         </div>
         
