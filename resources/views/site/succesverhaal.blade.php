@@ -167,6 +167,7 @@
   padding-top: 2rem;
   border-top: 2px solid #f0f0f0;
   text-align: center;
+  margin-bottom:10rem;
 }
 
 .back-to-stories {
