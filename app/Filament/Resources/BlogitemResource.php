@@ -34,7 +34,9 @@ class BlogitemResource extends Resource
                     ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->label('Hoofdafbeelding')
-                    ->image(),
+                    ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/jpg'])
+                    ->maxSize(10240),
                 Forms\Components\RichEditor::make('content')
                     ->label('Content')
                     ->required()
