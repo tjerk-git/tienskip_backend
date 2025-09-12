@@ -166,8 +166,18 @@ nav ul li a:hover:after {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     display: none;
+}
+
+.mobile_logo {
+    margin-bottom: 2rem;
+    align-self: center;
+}
+
+.mobile_logo img {
+    max-width: 150px;
+    height: auto;
 }
 
 .mobile_menu img {

@@ -17,6 +17,9 @@
     <div class="header__container">
 
       <div class="mobile_menu">
+        <div class="mobile_logo">
+          <a href="/"><img src="/images/logo.png" alt="Tienskip logo"></a>
+        </div>
 
         <nav>
           <ul>
