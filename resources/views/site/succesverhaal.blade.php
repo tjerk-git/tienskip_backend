@@ -28,7 +28,7 @@
     @if($blogitem->image)
       <section class="article-image">
         <div class="image-container">
-          <img src="{{ $blogitem->image }}" alt="{{ $blogitem->title }}">
+          <img src="{{ Str::startsWith($blogitem->image, ['http://', 'https://', '/']) ? $blogitem->image : Storage::url($blogitem->image) }}" alt="{{ $blogitem->title }}">
         </div>
       </section>
     @endif

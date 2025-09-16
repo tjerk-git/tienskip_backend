@@ -23,7 +23,7 @@
               <article class="blog-post-card">
                 @if($blogitem->image)
                   <div class="blog-post-image">
-                    <img src="{{ $blogitem->image }}" alt="{{ $blogitem->title }}">
+                    <img src="{{ Str::startsWith($blogitem->image, ['http://', 'https://', '/']) ? $blogitem->image : Storage::url($blogitem->image) }}" alt="{{ $blogitem->title }}">
                   </div>
                 @endif
                 
