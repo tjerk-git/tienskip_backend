@@ -553,7 +553,6 @@ h2 {
 .card {
     width: 35rem;
     height: 45rem;
-    background-image: url("/images/1.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -579,17 +578,6 @@ h2 {
     color: inherit;
 }
 
-.first {
-    background-image: url("/images/8.png");
-}
-
-.second {
-    background-image: url("/images/3.png");
-}
-
-.third {
-    background-image: url("/images/11.png");
-}
 
 .card_red_box {
     position: absolute;

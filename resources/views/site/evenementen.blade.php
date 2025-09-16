@@ -57,7 +57,10 @@
         @if($blogitems->count() > 0)
           <div class="cards_container">
             @foreach($blogitems as $index => $blogitem)
-              <div class="card {{ $index == 0 ? 'first' : ($index == 1 ? 'second' : 'third') }}">
+              <div class="card {{ $index == 0 ? 'first' : ($index == 1 ? 'second' : 'third') }}" 
+                   @if($blogitem->image) 
+                     style="background-image: url('{{ asset('storage/' . $blogitem->image) }}'); background-size: cover; background-position: center;"
+                   @endif>
                 <a href="/succesverhalen/{{ $blogitem->slug }}" class="card-link">
                   <div class="card_footer">
                     <h4>{{ $blogitem->title }}</h4>
