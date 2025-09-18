@@ -35,7 +35,7 @@ class EventController extends Controller
       $html = "<div class='map_province'><h1 class='red_box align_center'>" . ucfirst($province) . "</h1>";
 
       if($events->count() == 0){
-        $html .= '<div class="mini_event"><p class="mini_event_title">Hier zijn wij nog niet actief, of we hebben aankomende evenementen in deze provincie. </p> <p class="">Op de hoogte blijven van onze activiteiten in deze provincie? Neem <a href="/contact">contact met</a> ons op.</p></div>';
+        $html .= '<div class="mini_event"><p class="mini_event_title">Hier zijn wij nog niet actief, of we hebben aankomende evenementen in deze provincie.<br><br>Op de hoogte blijven van onze activiteiten in deze provincie? Neem <a href="/contact">contact met</a> ons op.</p></div>';
       }
 
       foreach ($events as $event) {
@@ -49,7 +49,10 @@ class EventController extends Controller
                   " . $event->start_date->isoFormat('D MMMM YYYY') . "
                 </div>
                 <div class='mini_event_location'>
-                  $event->city
+                  " . $event->city . "
+                </div>
+                <div class='mini_event_description'>
+                  " . $event->description . "
                 </div>
               </div>
             </div>
