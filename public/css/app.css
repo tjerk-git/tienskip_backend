@@ -1352,6 +1352,7 @@ footer {
 
 .team-member:hover {
     transform: translateY(-5px);
+    border-radius: 15px;
 }
 
 .member-image {
@@ -1364,6 +1365,11 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius:15px 15px 0px 0px;
+}
+
+.member-image img:hover{
+    border-radius:15px 15px 0px 0px;
 }
 
 .member-info {
