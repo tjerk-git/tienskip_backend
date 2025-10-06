@@ -22,8 +22,6 @@ class EventController extends Controller
     $json = new \stdClass();
     $json->provinces = [];  // Initialize the provinces array
 
-    $images = ['first', 'second', 'third'];
-
     // loop through the provinces and get the events
     foreach ($provinces as $province) {
 
@@ -39,11 +37,11 @@ class EventController extends Controller
       }
 
       foreach ($events as $event) {
-        $random_img = $images[array_rand($images)];
+        $random_img_number = rand(1, 21);
         if($event->start_date){
           $html .= "
           <a href='https://tienskip.nl/aanmelden' target='_blank'>
-            <div class='mini_event " . $random_img . "'>
+            <div class='mini_event' style='background-image: url(\"/images/placeholders/tienskip_image_" . $random_img_number . ".jpg\");'>
               <div class='mini_event_container'>
                 <div class='mini_event_title'>
                   " . $event->start_date->isoFormat('D MMMM YYYY') . "
